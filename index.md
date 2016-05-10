@@ -1,0 +1,1 @@
+#Welcome to Web Mapping for Summer 2016! Submit your labs in each of their respective folders in this repository.
