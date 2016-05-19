@@ -10,6 +10,12 @@
   <script>
   var mymap = L.map('mapid').setView([51.505, -0.09], 13);
   L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {attribution: '© <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'}).addTo(mymap);
+  
+  var circle = L.circle([51.508, -0.11], 500, {
+    color: 'red',
+    fillColor: '#f03',
+    fillOpacity: 0.5
+    }).addTo(mymap);
   </script>
 </body>
  
