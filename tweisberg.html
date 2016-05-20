@@ -14,7 +14,7 @@
   var popup = L.popup()
     .setLatLng([39.952584, -75.165222])
     .setContent("Start.")
-    .openOn(mymap);
+    .addTo(mymap);
   
   var circle = L.circle([39.952584, -75.165222], 1000, {
     color: 'blue',
