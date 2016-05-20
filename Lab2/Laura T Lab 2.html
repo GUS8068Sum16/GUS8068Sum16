@@ -7,15 +7,13 @@
   <h1> My Name is Laura Trzaska </h1>
   <h2> This is a map of places I have visited in central Florida </h2>
   
-  <div id="mapid" style="height:800px; width:1200px;"  ></div>
+  <div id="mymap" style="height:800px; width:1200px;"  ></div>
   
 
 <script>
 
-  var mymap = L.map('mapid').setView([29.1680215,-82.2762873], 13);
+  var mymap = L.map('mymap').setView([29.1680215,-82.2762873], 13);
 L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {attribution: '© <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'}).addTo(myMap);
-  
-
   
 var marker = L.marker([29.2021277,-82.0407485]).addTo(mymap);
 var popup = L.popup()
@@ -28,7 +26,6 @@ var popup = L.popup()
       .setLatLng([28.8010481,-82.5768147])
     .setContent("Homosassa Springs State Park")
     .openOn(mymap);
-    </script>
     
  var marker = L.marker([27.9874555,-82.8195094]).addTo(mymap);
   var popup = L.popup()
