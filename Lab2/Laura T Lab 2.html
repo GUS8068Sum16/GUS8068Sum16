@@ -12,6 +12,7 @@
   
   <div id="mapid" style"height:800px; width:1200px;"></div>
 
+<script>
 var mymap = L.map('mapid').setView([-82.2762873,29.1680215], 13);
 
 L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {attribution: '© <a href="http://osm.org/copyright'>OpenStreetMap</a> contributors'}).addTo(myMap);
@@ -47,7 +48,7 @@ var marker = L.marker([28.4743207,-81.4678193]).addTo(mymap);
       .setLatLng([29.2086838,-81.09661])
     .setContent("Daytona Beach")
     .openOn(mymap);
-  
+  </script>
   
 </body>
 </html>
