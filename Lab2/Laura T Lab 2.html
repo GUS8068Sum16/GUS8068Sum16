@@ -6,10 +6,48 @@
   <h1> My Name is Laura Trzaska </h1>
   <h2> This is a map of places I have visited in central Florida </h2>
   
-  <div id="map"></div>
+  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
+   <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+
+  
+  <div id="mapid" style"height:800px; width:1200px;"></div>
+
+var mymap = L.map('mapid').setView([29.1680215,-82.2762873], 13);
+
+L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {attribution: '© <a href="http://osm.org/copyright'>OpenStreetMap</a> contributors'}).addTo(myMap);
     <script>
   
-  L.map()
+ var marker = L.marker([29.2021277,-82.0407485]).addTo(mymap);
+var popup = L.popup()
+    .setLatLng([29.2021277,-82.0407485])
+    .setContent("Silver Springs State Park")
+    .openOn(mymap);
+
+  var marker = L.marker([28.8010481,-82.5768147]).addTo(mymap);
+      .setLatLng([28.8010481,-82.5768147])
+    .setContent("Homosassa Springs State Park")
+    .openOn(mymap);
+  
+  var marker = L.marker([27.9874555,-82.8195094]).addTo(mymap);
+      .setLatLng([27.9874555,-82.8195094])
+    .setContent("Clearwater Beach")
+    .openOn(mymap);
+  
+  var marker = L.marker([28.417663,-81.581212]).addTo(mymap);
+      .setLatLng([28.417663,-81.581212])
+    .setContent("Walt Disney World")
+    .openOn(mymap);
+  
+var marker = L.marker([28.4743207,-81.4678193]).addTo(mymap);
+    .setLatLng([28.4743207,-81.4678193])
+    .setContent("Universal Studios")
+    .openOn(mymap);
+
+  var marker = L.marker([29.2086838,-81.09661]).addTo(mymap);
+      .setLatLng([29.2086838,-81.09661])
+    .setContent("Daytona Beach")
+    .openOn(mymap);
+  
   
 </body>
 </html>
