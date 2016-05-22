@@ -2,23 +2,19 @@
 <head>
  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
  
- <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
- 
 </head>
 <body>
+
+<script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
 
 <h1>Old Growth Forests of PA</h1>
 
 <h2>by Jodie Spross</h2>
 
-<div id='mapid'></div>
+<div id='mapid' style="height:800px; width:1200px;></div>
 
-#mapid { height: 180px, width: 250px; }
-
-var mymap = L.map('mapid').setView([51.505, -0.09], 13);
-
-L.tileLayer('http://{s}.tile.osm.org/{8}/{40.895}/{-77.772}.png', {attribution: '© <a href="http://osm.org/copyright'>OpenStreetMap</a> contributors'}).addTo(spross.html);
-
+L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {attribution: '© <a href="http://osm.org/copyright'>OpenStreetMap</a> contributors'}).addTo(mymap);
+var mymap = L.map('mapid').setView([40.895, -77.772&layers=Q], 8);
 
 
 
