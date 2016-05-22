@@ -4,10 +4,21 @@
  <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
 </head>
 <body>
-<div id="mapid"></div>
-<h1>Map Title</h1>
+
+<h1>Old Growth Forests of PA</h1>
 
 <h2>by Jodie Spross</h2>
+
+<div id='mapid'></div>
+
+#mapid { height: 180px, width: 250px; }
+
+var mymap = L.map('mapid').setView([51.505, -0.09], 13);
+
+L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {attribution: '© <a href="http://osm.org/copyright'>OpenStreetMap</a> contributors'}).addTo(myMap);
+
+
+
 
 </body>
 </html>
