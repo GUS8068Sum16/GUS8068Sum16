@@ -20,35 +20,26 @@ var markerA = L.marker([29.2021277,-82.0407485]).addTo(mymap)
     .bindPopup("Silver Springs State Park")
     .openPopup();
 
-  var markerB = L.marker([28.8010481,-82.5768147]).addTo(mymap);
-  var popupB = L.popup()
-      .setLatLng([28.8010481,-82.5768147])
-    .setContent("Homosassa Springs State Park")
-    .openOn(mymap);
+  var markerB = L.marker([28.8010481,-82.5768147]).addTo(mymap)
+    .bindPopup("Homosassa Springs State Park")
+    .openPopup();
+  
+ var markerC = L.marker([27.9874555,-82.8195094]).addTo(mymap)
+    .bindPopup("Clearwater Beach")
+    .openPopup();
+
+ var markerD = L.marker([28.417663,-81.581212]).addTo(mymap)
+    .bindPopup("Walt Disney World")
+    .openPopup();
     
- var markerC = L.marker([27.9874555,-82.8195094]).addTo(mymap);
-  var popupC = L.popup()
-      .setLatLng([27.9874555,-82.8195094])
-    .setContent("Clearwater Beach")
-    .openOn(mymap);
+ var markerE = L.marker([28.4743207,-81.4678193]).addTo(mymap)
+    .bindPopup("Universal Studios")
+    .openPopup();
 
- var markerD = L.marker([28.417663,-81.581212]).addTo(mymap);
-  var popupD = L.popup()
-      .setLatLng([28.417663,-81.581212])
-    .setContent("Walt Disney World")
-    .openOn(mymap);
+var markerF = L.marker([29.2086838,-81.09661]).addTo(mymap)
+    .bindPopup("Daytona Beach")
+    .openPopup();
 
- var markerE = L.marker([28.4743207,-81.4678193]).addTo(mymap);
-var popupE = L.popup()
-    .setLatLng([28.4743207,-81.4678193])
-    .setContent("Universal Studios")
-    .openOn(mymap);
-
-var markerF = L.marker([29.2086838,-81.09661]).addTo(mymap);
-  var popupF = L.popup()
-      .setLatLng([29.2086838,-81.09661])
-    .setContent("Daytona Beach")
-    .openOn(mymap);
   </script>
   
 </body>
