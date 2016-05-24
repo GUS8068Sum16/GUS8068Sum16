@@ -16,9 +16,7 @@ L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
   attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
   }).addTo(mymap);
   
-var markerA = L.marker([29.2021277,-82.0407485]).addTo(mymap);
-var popupA = L.popup()
-    .setLatLng([29.2021277,-82.0407485])
+var markerA = L.marker([29.2021277,-82.0407485]).addTo(mymap)
     .bindPopup("Silver Springs State Park")
     .openPopup();
 
