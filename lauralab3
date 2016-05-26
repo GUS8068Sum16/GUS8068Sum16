@@ -10,9 +10,7 @@
    <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
     
 <script>
-  var mymap = L.map('mapid').setView([29.2021277,-82.0407485], 9);
-  
-L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}', {
+  var mymap = L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}', {
 	attribution: 'Tiles &copy; Esri &mdash; National Geographic, Esri, DeLorme, NAVTEQ, UNEP-WCMC, USGS, NASA, ESA, METI, NRCAN, GEBCO, NOAA, iPC',
 	maxZoom: 16
  }).addTo(mymap);
