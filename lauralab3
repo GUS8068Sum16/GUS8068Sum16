@@ -10,10 +10,16 @@
    <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
     
 <script>
-  var mymap = L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}', {
-	attribution: 'Tiles &copy; Esri &mdash; National Geographic, Esri, DeLorme, NAVTEQ, UNEP-WCMC, USGS, NASA, ESA, METI, NRCAN, GEBCO, NOAA, iPC',
-	maxZoom: 16
+  var mymap == L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/terrain/{z}/{x}/{y}.{ext}', {
+	attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+	subdomains: 'abcd',
+	minZoom: 4,
+	maxZoom: 18,
+	ext: 'png',
+	bounds: [[22, -132], [70, -56]]
  }).addTo(mymap);
+  
+  
   
 var markerA = L.marker([29.2021277,-82.0407485]).addTo(mymap)
     .bindPopup("Silver Springs State Park")
