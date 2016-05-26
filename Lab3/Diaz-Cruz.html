@@ -15,17 +15,72 @@
 	attribution: 'Tiles Courtesy of <a href="http://www.mapquest.com/">MapQuest</a> &mdash; Portions Courtesy NASA/JPL-Caltech and U.S. Depart. of Agriculture, Farm Service Agency',
 	subdomains: '1234'
 }).addTo(mymap);
-var geojsonFeature = {
-    "type": "Feature",
-    "properties": {
-        "name": "Coors Field",
-        "amenity": "Baseball Stadium",
-        "popupContent": "This is where the Rockies play!"
-    },
-    "geometry": {
-        "type": "Point",
-        "coordinates": [-75.9501276, 40.3323881]
-    }
+var hugeDataset = {
+	“type”    : “FeatureCollection”,
+	“features”: [{
+  "type": "Feature",
+  "properties": {
+    "name": "Dinagat Islands"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [40.332388,  -75.9501276]
+   }
+},{
+  "type": "Feature",
+  "properties": {
+    "name": "Dinagat Islands"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [125.6, 10.1]
+   }
+},{
+  "type": "Feature",
+  "properties": {
+    "name": "Dinagat Islands"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [125.6, 10.1]
+   }
+},{
+  "type": "Feature",
+  "properties": {
+    "name": "Dinagat Islands"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [125.6, 10.1]
+   }
+},{
+  "type": "Feature",
+  "properties": {
+    "name": "Dinagat Islands"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [125.6, 10.1]
+   }
+},{
+  "type": "Feature",
+  "properties": {
+    "name": "Dinagat Islands"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [125.6, 10.1]
+   }
+},{
+  "type": "Feature",
+  "properties": {
+    "name": "Dinagat Islands"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [125.6, 10.1]
+   }
+},]
 };
 L.geoJson(geojsonFeature).addTo(mymap);
 </script>
