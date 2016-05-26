@@ -94,6 +94,21 @@
     .setContent("End.")
     .addTo(mymap);
     
+    var geojsonFeature = {
+    "type": "Feature",
+    "properties": {
+        "name": "Wigwam Motel",
+        "amenity": "Motel",
+        "popupContent": "A motel inspired by Native American Wigwams!"
+    },
+    "geometry": {
+        "type": "Point",
+        "coordinates": [36.169941, -115.13983]
+    }
+};
+    
+    L.geoJson(geojsonFeature).addTo(mymap);
+    
   </script>
 </body>
  
