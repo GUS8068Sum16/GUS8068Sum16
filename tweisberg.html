@@ -97,9 +97,9 @@
     var geojsonFeature = {
     "type": "Feature",
     "properties": {
-        "name": "Wigwam Motel",
-        "amenity": "Motel",
-        "popupContent": "A motel inspired by Native American Wigwams!"
+        "name": "Las Vegas",
+        "amenity": "City",
+        "popupContent": "What happens in Vegas, stays in Vegas!"
     },
     "geometry": {
         "type": "Point",
@@ -125,7 +125,9 @@
 'img':'<img src="http://link/to/source.jpg"/>'},
 'geometry':{'type':'Point','coordinates':[-75.1474439, 39.9716709]}}
 ]};
-    
+
+    L.geoJson(myGeoJSON).addTo(mymap);
+
   </script>
 </body>
  
