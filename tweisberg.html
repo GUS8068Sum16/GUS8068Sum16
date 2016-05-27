@@ -130,7 +130,7 @@
 'geometry':{'type':'Point','coordinates':[-75.1474439, 39.9716709]}}
 ]};
 
-function onEachFeature(feature, layer) {
+function onEachFeature(FeatureCollection, layer) {
     if (FeatureCollection.properties && FeatureCollection.properties.popupContent) {
         layer.bindPopup(FeatureCollection.properties.popupContent);
     }
