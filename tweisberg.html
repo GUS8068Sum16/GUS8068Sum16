@@ -109,6 +109,10 @@
     
     L.geoJson(geojsonFeature).addTo(mymap);
     
+    L.geoJson(geojsonFeature, {
+    onEachFeature: onEachFeature
+}).addTo(mymap);
+    
     var myGeoJSON = {
 	'type' : 'FeatureCollection',
 	'features' : [
