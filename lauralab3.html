@@ -23,12 +23,7 @@
   
    var myGeoJSON = {
    	
-   	function onEachFeature(feature, layer) {
-        layer.bindPopup("<h1>"+feature.properties.name+"</h1><p>"+feature.properties.caption+"</p>"+feature.properties.img);
-	}
-
-   	
-	"type" : "FeatureCollection",
+   	"type" : "FeatureCollection",
 	"features":[
 		{"type":"Feature",
 		"properties":{
@@ -44,7 +39,11 @@
 			"type":"Point",
 			"coordinates":[-82.5768147, 28.8010481]}}}
    	]};
-   		
+   	
+   function onEachFeature(feature, layer) {
+        layer.bindPopup("<h1>"+feature.properties.name+"</h1><p>"+feature.properties.caption+"</p>"+feature.properties.img);
+	}
+	
   </script>
   
 </body>
