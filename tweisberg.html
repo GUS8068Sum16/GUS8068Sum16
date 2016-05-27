@@ -114,12 +114,11 @@
         layer.bindPopup(geojsonFeature.properties.popupContent);
     }
 }
-    
     L.geoJson(geojsonFeature, {
     onEachFeature: onEachFeature
 }).addTo(mymap);
 
-    var myGeoJSON = {
+    var lump = {
 	'type' : 'FeatureCollection',
 	'features' : [
 		{'type':'Feature', 
@@ -129,6 +128,7 @@
 'img':'<img src="http://link/to/source.jpg"/>'},
 'geometry':{'type':'Point','coordinates':[-75.1474139, 39.9816609]}},
 {'type':'Feature',
+
  'properties':{
 'name':'myPlace2',
 'popupContent':'this is ALSO the body text',
@@ -136,9 +136,9 @@
 'geometry':{'type':'Point','coordinates':[-75.1474439, 39.9716709]}}
 ]};
 
-    L.geoJson(myGeoJSON).addTo(mymap);
+    L.geoJson(lump).addTo(mymap);
     
-    L.geoJson(myGeoJSON, {
+    L.geoJson(lump, {
     onEachFeature: onEachFeature
 }).addTo(mymap);
 
