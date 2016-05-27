@@ -130,8 +130,8 @@
 'geometry':{'type':'Point','coordinates':[-75.1474439, 39.9716709]}}
 ]};
 
-function onEachFeature(FeatureCollection, layer) {
-    if (FeatureCollection.properties && FeatureCollection.properties.popupContent) {
+function onEachFeature(geoJson, layer) {
+    if (geoJson.properties && geoJson.properties.popupContent) {
         layer.bindPopup(FeatureCollection.properties.popupContent);
     }
 }
