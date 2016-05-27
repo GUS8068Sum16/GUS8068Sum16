@@ -127,9 +127,10 @@
 ]};
 
     L.geoJson(myGeoJSON).addTo(mymap);
+    
     L.geoJson(geojsonFeature, {
     onEachFeature: onEachFeature
-}).addTo(map);
+}).addTo(mymap);
 
   </script>
 </body>
