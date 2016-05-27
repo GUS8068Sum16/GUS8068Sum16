@@ -131,8 +131,8 @@
 ]};
 
 function onEachFeature(geoJson, layer) {
-    if (geoJson.properties && geoJson.properties.popupContent) {
-        layer.bindPopup(geoJson.properties.popupContent);
+    if (myGeoJson.properties && myGeoJson.properties.popupContent) {
+        layer.bindPopup(myGeoJson.properties.popupContent);
     }
 }
     L.geoJson(myGeoJSON).addTo(mymap);
