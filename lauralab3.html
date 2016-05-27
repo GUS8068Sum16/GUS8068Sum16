@@ -43,7 +43,9 @@
 			'type':'Point',
 			'coordinates':[28.8010481,-82.5768147]}}, 	
 
-  
+  L.geoJson(geojsonFeature, {
+    onEachFeature: onEachFeature
+}).addTo(map);
   
   
   
