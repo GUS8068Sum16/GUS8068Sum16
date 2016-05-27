@@ -89,11 +89,6 @@
     fillOpacity: 0.5
     }).addTo(mymap);
     
-  var popup = L.popup()
-    .setLatLng([33.985047, -118.469483])
-    .setContent("End.")
-    .addTo(mymap);
-    
     var geojsonFeature = {
     "type": "Feature",
     "properties": {
@@ -127,13 +122,21 @@
 'popupContent':'Philadelphia: The Start.',
 'img':'<img src="http://link/to/source.jpg"/>'},
 'geometry':{'type':'Point','coordinates':[ -75.165222, 39.952584]}},
-{'type':'Feature',
 
+	{'type':'Feature',
  'properties':{
 'name':'Los Angeles',
 'popupContent':'Hollywood: Le Fin',
 'img':'<img src="http://link/to/source.jpg"/>'},
 'geometry':{'type':'Point','coordinates':[ -118.469483, 33.985047]}}
+
+{'type':'Feature',
+ 'properties':{
+'name':'Pittsburgh',
+'popupContent':'Pittsburgh had lots of steep hills!',
+'img':'<img src="http://link/to/source.jpg"/>'},
+'geometry':{'type':'Point','coordinates':[ -75.165222, 39.952584]}}
+
 ]};
 
     L.geoJson(lump).addTo(mymap);
