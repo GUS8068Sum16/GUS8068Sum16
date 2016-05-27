@@ -130,6 +130,11 @@
 'geometry':{'type':'Point','coordinates':[-75.1474439, 39.9716709]}}
 ]};
 
+function onEachFeature(feature, layer) {
+    if (feature.properties && feature.properties.popupContent) {
+        layer.bindPopup(feature.properties.popupContent);
+    }
+}
     L.geoJson(myGeoJSON).addTo(mymap);
     
     L.geoJson(myGeoJSON, {
