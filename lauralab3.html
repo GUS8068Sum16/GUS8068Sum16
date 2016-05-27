@@ -22,6 +22,12 @@
  }).addTo(mymap);
   
    var myGeoJSON = {
+   	
+   	function onEachFeature(feature, layer) {
+        layer.bindPopup("<h1>"+feature.properties.name+"</h1><p>"+feature.properties.caption+"</p>"+feature.properties.img);
+	}
+
+   	
 	"type" : "FeatureCollection",
 	"features":[
 		{"type":"Feature",
