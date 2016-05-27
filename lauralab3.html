@@ -21,6 +21,11 @@
 	bounds: [[22, -132], [70, -56]]
  }).addTo(mymap);
   
+  function onEachFeature(feature, layer) {
+        layer.bindPopup("<h1>"+feature.properties.name+"</h1><p>"+feature.properties.caption+"</p>"+feature.properties.img);
+	}
+	
+  
    var myGeoJSON = {
    	
    	"type" : "FeatureCollection",
@@ -40,10 +45,7 @@
 			"coordinates":[-82.5768147, 28.8010481]}}}
    	]};
    	
-   function onEachFeature(feature, layer) {
-        layer.bindPopup("<h1>"+feature.properties.name+"</h1><p>"+feature.properties.caption+"</p>"+feature.properties.img);
-	}
-	
+
   </script>
   
 </body>
