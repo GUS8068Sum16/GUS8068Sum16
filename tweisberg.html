@@ -109,6 +109,12 @@
     
     L.geoJson(geojsonFeature).addTo(mymap);
     
+    function onEachFeature(geojsonFeature, layer) {
+    if (geojsonFeature.properties && geojsonFeature.properties.popupContent) {
+        layer.bindPopup(geojsonFeature.properties.popupContent);
+    }
+}
+    
     L.geoJson(geojsonFeature, {
     onEachFeature: onEachFeature
 }).addTo(mymap);
