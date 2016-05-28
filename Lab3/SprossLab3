@@ -1,0 +1,43 @@
+<html>
+<head>
+ <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
+ 
+</head>
+<body>
+
+<h1>Old Growth Forests of PA</h1>
+
+<h2>by Jodie Spross</h2>
+
+<div id='mapid' style="height:800px;"></div>
+
+<script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+<script>
+var mymap = L.map('mapid').setView([40.8950,-77.7720],9);
+L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(mymap);
+
+var marker = L.marker([41.1934, -76.1646]).addTo(mymap);
+marker.bindPopup("<b>Ricketts Glen</b><br>2000 acres - Northern Hardwood Forest").openPopup();
+
+var marker1 = L.marker([41.3838, -78.5614]).addTo(mymap);
+marker1.bindPopup("<b>Tionesta</b><br>4000 acres - Eastern Hemlock, American Beech, Sugar Maple").openPopup();
+
+var marker2 = L.marker([41.1925, -79.0950]).addTo(mymap);
+marker2.bindPopup("<b>Cooks Forest</b><br>1500-2000 acres - Eastern White Pine, Eastern Hemlock, Northern Red Oak, White Oak, etc.").openPopup();
+
+var marker3 = L.marker([40.4345, -77.4550]).addTo(mymap);
+marker3.bindPopup("<b>Bear Meadows</b><br>320 acres - Black Spruce, Balsam Fir bog").openPopup();
+
+var marker4 = L.marker([39.834, -76.318]).addTo(mymap);
+marker4.bindPopup("<b>Holtwood Preserve</b><br>200 acres - Chestnut Oak, Eastern Hemlock, Umbrella Magnolia").openPopup();
+
+var marker5 = L.marker([40.4836, -77.1659]).addTo(mymap);
+marker5.bindPopup("<b>Snyder Middleswarth</b><br>250 acres - 	Eastern Hemlock, Eastern White Pine, Pitch Pine").openPopup();
+
+var marker6 = L.marker([41.41333, -79.15152]).addTo(mymap);
+marker6.bindPopup("<b>Hearts Content</b><br>122 acres - Eastern White Pine, Eastern Hemlock, American Beech").openPopup();
+
+</script>
+</body>
+</html>
