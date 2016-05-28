@@ -15,12 +15,12 @@
 
 <script>
 
+var mymap = L.map('mapid').setView([40.8950,-77.7720],8);
+
 var Esri_NatGeoWorldMap = L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}', {
 	attribution: 'Tiles &copy; Esri &mdash; National Geographic, Esri, DeLorme, NAVTEQ, UNEP-WCMC, USGS, NASA, ESA, METI, NRCAN, GEBCO, NOAA, iPC',
 	maxZoom: 16
 });
-
-L.geoJson(geojsonFeature).addTo(map);
 
 var marker = L.marker([41.1934, -76.1646]).addTo(mymap);
 marker.bindPopup("<b>Ricketts Glen</b><br>2000 acres - Northern Hardwood Forest").openPopup();
@@ -38,7 +38,7 @@ var marker4 = L.marker([39.834, -76.318]).addTo(mymap);
 marker4.bindPopup("<b>Holtwood Preserve</b><br>200 acres - Chestnut Oak, Eastern Hemlock, Umbrella Magnolia").openPopup();
 
 var marker5 = L.marker([40.4836, -77.1659]).addTo(mymap);
-marker5.bindPopup("<b>Snyder Middleswarth</b><br>250 acres - 	Eastern Hemlock, Eastern White Pine, Pitch Pine").openPopup();
+marker5.bindPopup("<b>Snyder Middleswarth</b><br>250 acres - Eastern Hemlock, Eastern White Pine, Pitch Pine").openPopup();
 
 var marker6 = L.marker([41.41333, -79.15152]).addTo(mymap);
 marker6.bindPopup("<b>Hearts Content</b><br>122 acres - Eastern White Pine, Eastern Hemlock, American Beech").openPopup();
