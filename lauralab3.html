@@ -20,12 +20,7 @@
 	ext: 'png',
 	bounds: [[22, -132], [70, -56]]
  }).addTo(mymap);
-  
-  function onEachFeature(feature, layer) {
-        layer.bindPopup("<h1>"+feature.properties.name+"</h1><p>"+feature.properties.caption+"</p>"+feature.properties.img)};
-	
-	
-  
+ 
    var myGeoJSON = {
    	
    	"type" : "FeatureCollection",
@@ -46,6 +41,17 @@
    	]};
    	
 
+
+L.geoJson(hugeDataset).addTo(mymap);
+function onEachFeature(feature, layer) {
+    // does this feature have a property named popupContent?
+    if (feature.properties && feature.properties.popupContent) {
+        layer.bindPopup(feature.properties.popupContent);
+
+ 
+  function onEachFeature(feature, layer) {
+        layer.bindPopup("<h1>"+feature.properties.name+"</h1><p>"+feature.properties.caption+"</p>"+feature.properties.img)};
+	
   </script>
   
 </body>
