@@ -17,7 +17,8 @@ var MapQuestOpen_Aerial = L.tileLayer('http://otile{s}.mqcdn.com/tiles/1.0.0/{ty
 	subdomains: '1234'
 });
 
-var mymap = L.map('mymap').setView([39.9816609, -75.1474139], 13);
+var mymap = L.mymap('map').setView([39.9816609, -75.1474139], 13);
+
 L.geoJson(MapQuestOpen_Aerial).addTo(mymap);
 	
   var popup = L.popup()
