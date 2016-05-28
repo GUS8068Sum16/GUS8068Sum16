@@ -14,9 +14,51 @@
 <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
 
 <script>
+
 var mymap = L.map('mapid').setView([40.8950,-77.7720],9);
-L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-}).addTo(mymap);
+
+L.geoJson(geojsonFeature).addTo(map);
+
+{
+ "currentVersion": 10.22,
+ "id": 0,
+ "name": "USGS TNM Topo Base Map",
+ "type": "Raster Layer",
+ "description": "See http://viewer.nationalmap.gov/help for assistance with The National Map viewer, services, or metadata.",
+ "geometryType": null,
+ "copyrightText": "",
+ "parentLayer": null,
+ "subLayers": [],
+ "minScale": 0,
+ "maxScale": 18055,
+ "defaultVisibility": true,
+ "extent": {
+  "xmin": -2.0074053901178245E7,
+  "ymin": -3.028145106001524E7,
+  "xmax": 2.0074053888921525E7,
+  "ymax": 3.0281451072271965E7,
+  "spatialReference": {
+   "wkid": 102100,
+   "latestWkid": 3857
+  }
+ },
+ "hasAttachments": false,
+ "htmlPopupType": "esriServerHTMLPopupTypeNone",
+ "displayField": "",
+ "typeIdField": null,
+ "fields": null,
+ "relationships": [],
+ "canModifyLayer": false,
+ "canScaleSymbols": false,
+ "hasLabels": false,
+ "capabilities": "Map,Query",
+ "supportsStatistics": false,
+ "supportsAdvancedQueries": false,
+ "supportedQueryFormats": "JSON, AMF",
+ "ownershipBasedAccessControlForFeatures": {"allowOthersToQuery": true},
+ "useStandardizedQueries": true
+}
+
 
 var marker = L.marker([41.1934, -76.1646]).addTo(mymap);
 marker.bindPopup("<b>Ricketts Glen</b><br>2000 acres - Northern Hardwood Forest").openPopup();
