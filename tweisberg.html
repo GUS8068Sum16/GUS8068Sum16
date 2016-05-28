@@ -10,14 +10,12 @@
   
   <script>
   
-var newbase = L.tileLayer('http://otile{s}.mqcdn.com/tiles/1.0.0/{type}/{z}/{x}/{y}.{ext}', {
+var MapQuestOpen_Aerial = L.tileLayer('http://otile{s}.mqcdn.com/tiles/1.0.0/{type}/{z}/{x}/{y}.{ext}', {
 	type: 'sat',
 	ext: 'jpg',
 	attribution: 'Tiles Courtesy of <a href="http://www.mapquest.com/">MapQuest</a> &mdash; Portions Courtesy NASA/JPL-Caltech and U.S. Depart. of Agriculture, Farm Service Agency',
 	subdomains: '1234'
 }).addTo(mymap);
-
-
 	
   var popup = L.popup()
     .setLatLng([42.877742, -97.380979])
