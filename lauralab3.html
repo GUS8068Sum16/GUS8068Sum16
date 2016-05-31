@@ -13,11 +13,12 @@
 
 function onEachFeature(feature, layer) {
         layer.bindPopup("<h1>"+feature.properties.name+"</h1><p>"+feature.properties.caption+"</p>"+feature.properties.img);
-        "style":{
+        <style>:{
         //all SVG styles allowed
-        "fill":"blue",
-        "fill-opacity":1.0},
-};
+        "fill":"red",
+        "stroke-width":"3",
+        "fill-opacity":0.6}
+}
 
 
   var mymap = L.map('mapid').setView([29.1740171,-82.2268479], 8);
