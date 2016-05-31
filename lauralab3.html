@@ -13,8 +13,16 @@
 
 function onEachFeature(feature, layer) {
         layer.bindPopup("<h1>"+feature.properties.name+"</h1><p>"+feature.properties.caption+"</p>"+feature.properties.img);
-}
+       }
+        
+var myStyle = {
+    "color": "#f03b20",
+    "opacity": 0.5
+};
 
+L.geoJson(myLines, {
+    style: myStyle
+}).addTo(map);
 
   var mymap = L.map('mapid').setView([29.1740171,-82.2268479], 8);
   
@@ -29,7 +37,7 @@ function onEachFeature(feature, layer) {
  
  
    var myGeoJSON = {
-   	
+   	style=myStyle
    	"type" : "FeatureCollection",
 	"features":[
 		{"type":"Feature",
@@ -45,10 +53,11 @@ function onEachFeature(feature, layer) {
 		"geometry":{
 			"type":"Point",
 			"coordinates":[-82.5768147, 28.8010481]}}}
+	
    	]};
    	
 
-var geojsonlayer = L.geoJson(myGeoJSON, {onEachFeature: onEachFeature}).addTo(map);
+var geojsonlayer = L.geoJson(myGeoJSON, {onEachFeature: onEachFeature}).addTo(mymap);
 
 
   </script>
