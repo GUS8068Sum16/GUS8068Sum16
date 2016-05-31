@@ -82,11 +82,11 @@ var PointSet = {
    }
 }]
 };
-L.geoJson(PointSet).addTo(mymap);
+
 function onEachFeature(feature, layer) {
     // does this feature have a property named popupContent?
    
-        layer.bindPopup(feature.properties.name + );
+        layer.bindPopup(feature.properties.name );
     
 }
 
@@ -98,11 +98,9 @@ var geojsonMarkerOptions = {
     opacity: 1,
     fillOpacity: 0.8
 };
-
-L.geoJson(geojsonMarkerOptions, {
-    pointToLayer: function (feature, latlng) {
-        return L.circleMarker(latlng, geojsonMarkerOptions);
-    }
+L.geoJson(PointSet, {
+    style: geojsonMarkerOptions,
+     onEachFeature: onEachFeature
 }).addTo(mymap);
 </script>
 </body>
