@@ -4,12 +4,17 @@
 </head>
 <body>
   <h1> Central Florida Tourism </h1>
-  <h2> My name is Laura and this is a map of places I have visited in central Florida </h2>
+  <h2> A collection of popular destinations to visit in Central Florida </h2>
   
   <div id="mapid" style="height:500px; width:900px;"></div>
    <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
     
 <script>
+
+function onEachFeature(feature, layer) {
+        layer.bindPopup("<h1>"+feature.properties.name+"</h1><p>"+feature.properties.caption+"</p>"+feature.properties.img);
+}
+
   var mymap = L.map('mapid').setView([29.1740171,-82.2268479], 8);
   
     L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/terrain/{z}/{x}/{y}.{ext}', {
@@ -22,7 +27,6 @@
  }).addTo(mymap);
  
  
-  
    var myGeoJSON = {
    	
    	"type" : "FeatureCollection",
@@ -36,14 +40,14 @@
 		{"type":"Feature",
 		"properties":{
 			"name":"Homosassa Springs State Park",
-			"caption":"Homassassa Springs is a great place to experience Florida's wildlife, including gators and manatees.",
+			"caption":"Homassassa Springs is a great place to experience Florida's wildlife, including alligators and manatees.",
 		"geometry":{
 			"type":"Point",
 			"coordinates":[-82.5768147, 28.8010481]}}}
    	]};
    	
 
-
+var geojsonlayer = L.geoJson(myGeoJSON, {onEachFeature: onEachFeature}).addTo(map);
 
 
   </script>
