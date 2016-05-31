@@ -55,7 +55,7 @@ var myStyle = {
 
 var geojsonlayer = L.geoJson(myGeoJSON, {onEachFeature: onEachFeature}).addTo(mymap);
 
-L.geoJson(mymap, {
+L.geoJson({
     style: myStyle
 }).addTo(map);
 
