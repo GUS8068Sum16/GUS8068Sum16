@@ -22,9 +22,19 @@ L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Ma
 	maxZoom: 16
 }).addTo(mymap);
 
+L.geoJson(geojsonFeature).addTo(map);
 
-var marker = L.marker([41.1934, -76.1646]).addTo(mymap);
-marker.bindPopup("<b>Ricketts Glen</b><br>2000 acres - Northern Hardwood Forest").openPopup();
+var geojsonFeature = {
+    "type": "Feature",
+    "properties": {
+        "name": "Ricketts Glen",
+        "amenity": "Old Growth Forest",
+        "popupContent": "2000 acres - Northern Hardwood Forest"
+    },
+    "geometry": {
+        "type": "Point",
+        "coordinates": [41.1934, -76.1646]
+    };
 
 var marker1 = L.marker([41.3838, -78.5614]).addTo(mymap);
 marker1.bindPopup("<b>Tionesta</b><br>4000 acres - Eastern Hemlock, American Beech, Sugar Maple").openPopup();
