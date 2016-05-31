@@ -137,8 +137,6 @@ L.geoJson(geojsonFeature, {
 }).addTo(mymap);
 
 
-};
-
 L.geoJson(lump, {
     pointToLayer: function (feature, latlng) {
         return L.circleMarker(latlng, geojsonMarkerOptions);
