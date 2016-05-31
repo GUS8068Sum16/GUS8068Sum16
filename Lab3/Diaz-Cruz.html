@@ -85,94 +85,11 @@ var PointSet = {
 L.geoJson(PointSet).addTo(mymap);
 function onEachFeature(feature, layer) {
     // does this feature have a property named popupContent?
-    if (feature.properties && feature.properties.popupContent) {
-        layer.bindPopup(feature.properties.popupContent);
-    }
+   
+        layer.bindPopup(feature.properties.name + );
+    
 }
-var hugeDataset = {
-	"type"    : "FeatureCollection",
-	"features": [ {
-    "type": "Feature",
-    "properties": {
-        "name": "Reading Hospital",
-        "amenity": "Hospital",
-        "popupContent": "This is where I was born!"
-    },
-    "geometry": {
-        "type": "Point",
-        "coordinates": [-75.9501276, 40.332388]
-    }
-},{ 
-"type": "Feature", 
-"properties": { 
-"name": "Coors Field", 
-"amenity": "Baseball Stadium", 
-"popupContent": "Where the Rockies play!" 
-}, 
-"geometry": { 
-"type": "Point", 
-"coordinates": [-75.9142738, 40.3513004] 
-} 
-},{ 
-"type": "Feature", 
-"properties": { 
-"name": "Coors Field", 
-"amenity": "Baseball Stadium", 
-"popupContent": "Where the Rockies play!" 
-}, 
-"geometry": { 
-"type": "Point", 
-"coordinates": [-76.1680003, 40.4530854] 
-} 
-},{ 
-"type": "Feature", 
-"properties": { 
-"name": "Coors Field", 
-"amenity": "Baseball Stadium", 
-"popupContent": "Where the Rockies play!" 
-}, 
-"geometry": { 
-"type": "Point", 
-"coordinates": [-75.9112716, 40.331391] 
-} 
-},{ 
-"type": "Feature", 
-"properties": { 
-"name": "Coors Field", 
-"amenity": "Baseball Stadium", 
-"popupContent": "Where the Rockies play!" 
-}, 
-"geometry": { 
-"type": "Point", 
-"coordinates": [-76.1475343, 40.35486] 
-} 
-},{ 
-"type": "Feature", 
-"properties": { 
-"name": "Coors Field", 
-"amenity": "Baseball Stadium", 
-"popupContent": "Where the Rockies play!" 
-}, 
-"geometry": { 
-"type": "Point", 
-"coordinates": [-75.8798211, 40.3335378] 
-} 
-},{ 
-"type": "Feature", 
-"properties": { 
-"name": "Coors Field", 
-"amenity": "Baseball Stadium", 
-"popupContent": "Where the Rockies play!" 
-}, 
-"geometry": { 
-"type": "Point", 
-"coordinates": [-75.9522903, 40.3232181] 
-} 
-}]
-};
-L.geoJson(hugeDataset, {
-    onEachFeature: onEachFeature
-}).addTo(mymap);
+
 var geojsonMarkerOptions = {
     radius: 8,
     fillColor: "#ff7800",
