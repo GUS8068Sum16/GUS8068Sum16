@@ -24,7 +24,18 @@ L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Ma
 
 L.geoJson(geojsonFeature).addTo(mymap);
 
-var geojsonFeature = {
+function onEachFeature(feature, layer) {
+    // does this feature have a property named popupContent?
+    if (feature.properties && feature.properties.popupContent) {
+        layer.bindPopup(feature.properties.popupContent);
+    }
+}
+
+var popups = {
+	“type”    : “FeatureCollection”,
+	“features”: 
+	
+[var geojsonFeature = {
     "type": "Feature",
     "properties": {
         "name": "Ricketts Glen",
@@ -35,7 +46,7 @@ var geojsonFeature = {
         "type": "Point",
         "coordinates": [41.1934, -76.1646]
     }
-};
+},
 var geojsonFeature1 = {
     "type": "Feature",
     "properties": {
@@ -47,7 +58,7 @@ var geojsonFeature1 = {
         "type": "Point",
         "coordinates": [41.3838, -78.5614]
     }
-};
+},
 var geojsonFeature2 = {
     "type": "Feature",
     "properties": {
@@ -59,7 +70,7 @@ var geojsonFeature2 = {
         "type": "Point",
         "coordinates": [41.1925, -79.0950]
     }
-};
+},
 var geojsonFeature3 = {
     "type": "Feature",
     "properties": {
@@ -71,7 +82,7 @@ var geojsonFeature3 = {
         "type": "Point",
         "coordinates": [40.4345, -77.4550]
     }
-};
+},
 var geojsonFeature4 = {
     "type": "Feature",
     "properties": {
@@ -83,7 +94,7 @@ var geojsonFeature4 = {
         "type": "Point",
         "coordinates": [39.834, -76.318]
     }
-};
+},
 var geojsonFeature5 = {
     "type": "Feature",
     "properties": {
@@ -95,7 +106,7 @@ var geojsonFeature5 = {
         "type": "Point",
         "coordinates": [40.4836, -77.1659]
     }
-};
+},
 var geojsonFeature6 = {
     "type": "Feature",
     "properties": {
@@ -107,7 +118,12 @@ var geojsonFeature6 = {
         "type": "Point",
         "coordinates": [41.41333, -79.15152]
     }
+};]
 };
+
+L.geoJson(geojsonFeature, {
+    onEachFeature: onEachFeature
+}).addTo(mymap);
 
 </script>
 </body>
