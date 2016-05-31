@@ -43,7 +43,7 @@ var geojsonFeature = {
 
 function onEachFeature(feature, layer) {
     if (feature.properties && feature.properties.popupContent) {
-        layer.bindPopup(feature.properties.popupContent);
+        layer.bindPopup(feature.properties.popupContent+ "<br />" +feature.properties.img);
     }
 };
     
@@ -132,10 +132,6 @@ L.geoJson(geojsonFeature, {
 'geometry':{'type':'Point','coordinates':[-118.469483, 33.985047]}},
  ]};
 
-    L.geoJson(lump, {
-    onEachFeature: onEachFeature
-}).addTo(mymap);
-
 var geojsonMarkerOptions = {
     radius: 8,
     fillColor: "#ff7800",
@@ -148,7 +144,8 @@ var geojsonMarkerOptions = {
 L.geoJson(lump, {
     pointToLayer: function (feature, latlng) {
         return L.circleMarker(latlng, geojsonMarkerOptions);
-    }
+    },
+    onEachFeature: onEachFeature
 }).addTo(mymap);
 
   </script>
