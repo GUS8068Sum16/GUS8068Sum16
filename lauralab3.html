@@ -20,9 +20,6 @@ var myStyle = {
     "opacity": 0.5
 };
 
-L.geoJson(myLines, {
-    style: myStyle
-}).addTo(map);
 
   var mymap = L.map('mapid').setView([29.1740171,-82.2268479], 8);
   
@@ -37,7 +34,6 @@ L.geoJson(myLines, {
  
  
    var myGeoJSON = {
-   	style=myStyle
    	"type" : "FeatureCollection",
 	"features":[
 		{"type":"Feature",
@@ -58,6 +54,10 @@ L.geoJson(myLines, {
    	
 
 var geojsonlayer = L.geoJson(myGeoJSON, {onEachFeature: onEachFeature}).addTo(mymap);
+
+L.geoJson(myLines, {
+    style: myStyle
+}).addTo(map);
 
 
   </script>
