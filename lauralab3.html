@@ -26,22 +26,22 @@ function onEachFeature(feature, layer) {
  }).addTo(mymap);
  
  
-   var myGeoJSON = {
+var myGeoJSON = {
    	"type" : "FeatureCollection",
 	"features":[
 		{"type":"Feature",
 		"properties":{
 			"name":"Silver Springs State Park",
-			"caption":"Silver Springs is known for its nature trails, crystal clear springs, and glass bottom boat rides.",
-		"geometry":{"type":"Point","coordinates":[-82.0407485, 29.2021277]}}}, 
+			"caption":"Silver Springs is known for its nature trails, crystal clear springs, and glass bottom boat rides."},
+		"geometry":{"type":"Point","coordinates":[29.2021277, -82.0407485]}}, 
 		
 		{"type":"Feature",
 		"properties":{
 			"name":"Homosassa Springs State Park",
-			"caption":"Homassassa Springs is a great place to experience Florida's wildlife, including alligators and manatees.",
+			"caption":"Homassassa Springs is a great place to experience Florida's wildlife, including alligators and manatees."},
 		"geometry":{
 			"type":"Point",
-			"coordinates":[-82.5768147, 28.8010481]}}}
+			"coordinates":[28.8010481, -82.5768147]}}
 	
    	]};
    	
