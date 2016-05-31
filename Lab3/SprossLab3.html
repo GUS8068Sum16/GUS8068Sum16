@@ -35,25 +35,79 @@ var geojsonFeature = {
         "type": "Point",
         "coordinates": [41.1934, -76.1646]
     }
-}.addTo(mymap);
-
-var marker1 = L.marker([41.3838, -78.5614]).addTo(mymap);
-marker1.bindPopup("<b>Tionesta</b><br>4000 acres - Eastern Hemlock, American Beech, Sugar Maple").openPopup();
-
-var marker2 = L.marker([41.1925, -79.0950]).addTo(mymap);
-marker2.bindPopup("<b>Cooks Forest</b><br>1500-2000 acres - Eastern White Pine, Eastern Hemlock, Northern Red Oak, White Oak, etc.").openPopup();
-
-var marker3 = L.marker([40.4345, -77.4550]).addTo(mymap);
-marker3.bindPopup("<b>Bear Meadows</b><br>320 acres - Black Spruce, Balsam Fir bog").openPopup();
-
-var marker4 = L.marker([39.834, -76.318]).addTo(mymap);
-marker4.bindPopup("<b>Holtwood Preserve</b><br>200 acres - Chestnut Oak, Eastern Hemlock, Umbrella Magnolia").openPopup();
-
-var marker5 = L.marker([40.4836, -77.1659]).addTo(mymap);
-marker5.bindPopup("<b>Snyder Middleswarth</b><br>250 acres - Eastern Hemlock, Eastern White Pine, Pitch Pine").openPopup();
-
-var marker6 = L.marker([41.41333, -79.15152]).addTo(mymap);
-marker6.bindPopup("<b>Hearts Content</b><br>122 acres - Eastern White Pine, Eastern Hemlock, American Beech").openPopup();
+};
+var geojsonFeature1 = {
+    "type": "Feature",
+    "properties": {
+        "name": "Tionesta",
+        "amenity": "Old Growth Forest",
+        "popupContent": "4000 acres - Eastern Hemlock, American Beech, Sugar Maple"
+    },
+    "geometry": {
+        "type": "Point",
+        "coordinates": [41.3838, -78.5614]
+    }
+};
+var geojsonFeature2 = {
+    "type": "Feature",
+    "properties": {
+        "name": "Cooks Forest",
+        "amenity": "Old Growth Forest",
+        "popupContent": "1500-2000 acres - Eastern White Pine, Eastern Hemlock, Northern Red Oak, White Oak, etc."
+    },
+    "geometry": {
+        "type": "Point",
+        "coordinates": [41.1925, -79.0950]
+    }
+};
+var geojsonFeature3 = {
+    "type": "Feature",
+    "properties": {
+        "name": "Bear Meadows",
+        "amenity": "Old Growth Forest",
+        "popupContent": "320 acres - Black Spruce, Balsam Fir bog"
+    },
+    "geometry": {
+        "type": "Point",
+        "coordinates": [40.4345, -77.4550]
+    }
+};
+var geojsonFeature4 = {
+    "type": "Feature",
+    "properties": {
+        "name": "Holtwood Preserve",
+        "amenity": "Old Growth Forest",
+        "popupContent": "200 acres - Chestnut Oak, Eastern Hemlock, Umbrella Magnolia"
+    },
+    "geometry": {
+        "type": "Point",
+        "coordinates": [39.834, -76.318]
+    }
+};
+var geojsonFeature5 = {
+    "type": "Feature",
+    "properties": {
+        "name": "Snyder Middleswarth",
+        "amenity": "Old Growth Forest",
+        "popupContent": "250 acres - Eastern Hemlock, Eastern White Pine, Pitch Pine"
+    },
+    "geometry": {
+        "type": "Point",
+        "coordinates": [40.4836, -77.1659]
+    }
+};
+var geojsonFeature6 = {
+    "type": "Feature",
+    "properties": {
+        "name": "Hearts Content",
+        "amenity": "Old Growth Forest",
+        "popupContent": "122 acres - Eastern White Pine, Eastern Hemlock, American Beech"
+    },
+    "geometry": {
+        "type": "Point",
+        "coordinates": [41.41333, -79.15152]
+    }
+};
 
 </script>
 </body>
