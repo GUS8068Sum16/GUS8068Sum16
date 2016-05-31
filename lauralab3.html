@@ -15,12 +15,6 @@ function onEachFeature(feature, layer) {
         layer.bindPopup("<h1>"+feature.properties.name+"</h1><p>"+feature.properties.caption+"</p>"+feature.properties.img);
        }
         
-var myStyle = {
-    "color": "#f03b20",
-    "opacity": 0.5
-};
-
-
   var mymap = L.map('mapid').setView([29.1740171,-82.2268479], 8);
   
     L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/terrain/{z}/{x}/{y}.{ext}', {
@@ -54,10 +48,6 @@ var myStyle = {
    	
 
 var geojsonlayer = L.geoJson(myGeoJSON, {onEachFeature: onEachFeature}).addTo(mymap);
-
-L.geoJson(myGeoJSON, {
-    style: myStyle
-}).addTo(mymap);
 
 
   </script>
