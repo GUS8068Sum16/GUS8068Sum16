@@ -15,7 +15,7 @@
 	attribution: 'Tiles Courtesy of <a href="http://www.mapquest.com/">MapQuest</a> &mdash; Portions Courtesy NASA/JPL-Caltech and U.S. Depart. of Agriculture, Farm Service Agency',
 	subdomains: '1234'
 }).addTo(mymap);
-var hugeDataset = {
+var PointSet = {
 	"type"    : "FeatureCollection",
 	"features": [{
   "type": "Feature",
@@ -82,7 +82,7 @@ var hugeDataset = {
    }
 }]
 };
-L.geoJson(hugeDataset).addTo(mymap);
+L.geoJson(PointSet).addTo(mymap);
 function onEachFeature(feature, layer) {
     // does this feature have a property named popupContent?
     if (feature.properties && feature.properties.popupContent) {
