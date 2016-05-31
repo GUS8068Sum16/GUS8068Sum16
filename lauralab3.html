@@ -12,8 +12,8 @@
 <script>
 
 function onEachFeature(feature, layer) {
-        layer.bindPopup("<h1>"+feature.properties.name+"</h1><p>"+feature.properties.caption+"</p>"+feature.properties.img);
-       }
+        layer.bindPopup("<h1>"+feature.properties.name+"</h1><p>"+feature.properties.caption+"</p>");
+       };
         
   var mymap = L.map('mapid').setView([29.1740171,-82.2268479], 8);
   
@@ -47,7 +47,7 @@ function onEachFeature(feature, layer) {
    	]};
    	
 
-var geojsonlayer = L.geoJson(myGeoJSON, {onEachFeature: onEachFeature}).addTo(mymap);
+L.geoJson(myGeoJSON, {onEachFeature: onEachFeature}).addTo(mymap);
 
 
   </script>
