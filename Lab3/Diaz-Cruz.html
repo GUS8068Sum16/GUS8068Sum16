@@ -32,7 +32,8 @@ var PointSet = {
 	"features": [{
   "type": "Feature",
   "properties": {
-    "name": "Reading Hospital"
+    "name": "Reading Hospital",
+    "image":"http://stopunions.com/wp-content/uploads/2013/09/Reading-Hospital.jpg"
      },
   "geometry": {
     "type": "Point",
@@ -98,7 +99,7 @@ var PointSet = {
 function onEachFeature(feature, layer) {
     // does this feature have a property named popupContent?
    
-        layer.bindPopup(feature.properties.name);
+        layer.bindPopup(feature.properties.name+feature.properties.image);
     
 }
 
