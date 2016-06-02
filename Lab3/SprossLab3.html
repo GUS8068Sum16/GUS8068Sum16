@@ -26,7 +26,7 @@ L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Ma
 function onEachFeature(feature, layer) {
     // does this feature have a property named popupContent?
     if (feature.properties && feature.properties.popupContent) {
-        layer.bindPopup(feature.properties.popupContent);
+        layer.bindPopup(feature.properties.name + "<br />" + popupContent);
     }
 }
 
