@@ -37,7 +37,7 @@ function onEachFeature(feature, layer) {
         layer.bindPopup("<h1>"+feature.properties.name+"</h1><p>"+feature.properties.caption+"</p>");
        };
         
-  var mymap = L.map('mapid').setView([29.1740171,-82.2268479], 9);
+  var mymap = L.map('mapid').setView([28.7735735,-81.9329307], 9);
   
     L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/terrain/{z}/{x}/{y}.{ext}', {
 	attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
