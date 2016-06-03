@@ -5,10 +5,15 @@
 	
 	h1 { text-align: center;}
 	h1 { color: rgb(1,108,89);}
+	h1 {font-family: Georgia
+		font-style: normal;
+		font-weight: bold;}
 	
 	h2 { text-align: center;}
 	h2 { color: rgb(1,108,89);}
-
+	h2 {font-family: Georgia
+		font-style: italic;
+		font-weight: normal;}
 	</style>
 	
   <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
@@ -27,7 +32,7 @@ function onEachFeature(feature, layer) {
         layer.bindPopup("<h1>"+feature.properties.name+"</h1><p>"+feature.properties.caption+"</p>");
        };
         
-  var mymap = L.map('mapid').setView([29.1740171,-82.2268479], 8);
+  var mymap = L.map('mapid').setView([29.1740171,-82.2268479], 9);
   
     L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/terrain/{z}/{x}/{y}.{ext}', {
 	attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
