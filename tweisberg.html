@@ -149,7 +149,7 @@ var geojsonMarkerOptions = {
 };
 
 L.geoJson(lump, {
-    pointToLayer: function (feature, latlng) {
+    pointToLayer: function (feature, latlng, img src) {
         return L.circleMarker(latlng, geojsonMarkerOptions, img src);
     },
     onEachFeature: onEachFeature
