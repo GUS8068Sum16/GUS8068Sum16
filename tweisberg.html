@@ -44,21 +44,6 @@ var popup = L.popup()
     .setContent("Click on any location for more details!.")
     .addTo(mymap);
   
- 
-var geojsonFeature = {
-    "type": "Feature",
-    "properties": {
-        "name": "Las Vegas",
-        "amenity": "City",
-        "popupContent": "What happens in Vegas, stays in Vegas!"
-    },
-    "geometry": {
-        "type": "Point",
-        "coordinates": [-115.13983, 36.169941]
-    }
-};
-    
-
 function onEachFeature(feature, layer) {
     if (feature.properties && feature.properties.popupContent) {
         layer.bindPopup(feature.properties.popupContent+ "<br />" +feature.properties.img);
@@ -150,9 +135,18 @@ L.geoJson(geojsonFeature, {
 'geometry':{'type':'Point','coordinates':[-118.469483, 33.985047]}},
  ]};
 
+	{'type':'Feature',
+ 'properties':{
+'name':'Las Vegas',
+'popupContent':'What happens in Vegas, stays in Vegas!',
+'img':'<img src="http://link/to/source.jpg"/>'},
+'geometry':{'type':'Point','coordinates':[-115.13983, 36.169941]}},
+ ]};
+ 
+
 var geojsonMarkerOptions = {
     radius: 8,
-    fillColor: "#ff7800",
+    fillColor: "#99d8c9",
     color: "#000",
     weight: 1,
     opacity: 1,
