@@ -45,7 +45,7 @@ var popup = L.popup()
     .addTo(mymap);
   
 function onEachFeature(feature, layer) {
-    if (feature.properties && feature.properties.popupContent && feature.properties.img) {
+    if (feature.properties && feature.properties.popupContent && feature.properties.popupContent.img) {
         layer.bindPopup(feature.properties.popupContent+ "<br />" +feature.properties.img);
     }
 };
