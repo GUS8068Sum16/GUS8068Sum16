@@ -44,7 +44,7 @@ var popup = L.popup()
     .setContent("Click on any location for more details!.")
     .addTo(mymap);
   
-function onEachFeature(feature, layer, img) {
+function onEachFeature(feature, layer) {
     if (feature.properties && feature.properties.popupContent && feature.properties.img) {
         layer.bindPopup(feature.properties.popupContent+ "<br />" +feature.properties.img);
     }
@@ -149,13 +149,12 @@ var geojsonMarkerOptions = {
 };
 
 L.geoJson(lump, {
-    pointToLayer: function (feature, latlng, img) {
+    pointToLayer: function (feature, latlng) {
         return L.circleMarker(latlng, geojsonMarkerOptions, img);
     },
     onEachFeature: onEachFeature
 }).addTo(mymap);
 
-document.getElementById("banner-img").innerHTML=output;);
 
   </script>
 </body>
