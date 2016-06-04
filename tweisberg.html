@@ -16,19 +16,6 @@
 	font-style: italic;
 	font-weight: normal;}
 	
-	<div id="mymap">
-    <div id="centeredBlock">centered</div>
-</div>
-
-	#mymap {
-	 text-align: center;
-	}
-
-	#centeredBlock {
-	   margin: 0 auto;
-	  text-align: center;
-	  width: 100%;
-	}
 	
 </style>	
 	
@@ -40,7 +27,7 @@
 <body> 
   <h1> Map of my 2011 roadtrip from Philadelphia to Los Angeles </h1>
   <h2> By Taryn Weisberg </h2>
-  <div id="mapid" style="height: 800px; width: 1000px;"></div>
+  <div id="mapid" style="height: 800px; width: 1000px; margin: 0 auto; text-align: center; width: 100%;"></div>
  
   <script>
  var mymap = L.map('mapid').setView([32.005747, -99.667969], 4); 
