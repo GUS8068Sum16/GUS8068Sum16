@@ -9,7 +9,7 @@ xhr.open("GET", URL, false);
 xhr.send();
 
 console.log(xhr.status);
-console.log(xhr.statusText);
+
 
 </script>
 </body>
