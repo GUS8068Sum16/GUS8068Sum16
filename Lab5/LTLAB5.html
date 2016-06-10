@@ -4,9 +4,6 @@ var xhr = new XMLHttpRequest();
 xhr.open(GET, http://burnsr77.github.io/GH_demo/PACo.geojson, true)
 xhr.send();
 
-le.log(xhr.status);
-console.log(xhr.statusText);
-
 var APIresponse = xhr.responseText
 
 var myJsonDictionary=JSON.parse(xhr.responseText);
