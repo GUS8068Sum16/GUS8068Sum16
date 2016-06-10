@@ -1,17 +1,15 @@
 <html>
 <head>
 
-
 </head>
-
 <body> 
-
+<script>
 var xhr=new XMLHttpRequest(https://github.com/burnsr77/burnsr77.github.io/blob/master/GH_demo/PACo.geojson);
 
 var APIresponse = xhr.responseText;
 
 var myJsonDictionary = JSON.parse(xhr.responseText);
-
+</script>
 </body>
 
 </html>
