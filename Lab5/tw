@@ -5,7 +5,7 @@
 <body> 
 <script>
 var xhr=new XMLHttpRequest();
-xhr.open("GET","https://github.com/burnsr77/burnsr77.github.io/blob/master/GH_demo/PACo.geojson", true);
+xhr.open("GET","https://github.com/burnsr77/burnsr77.github.io/blob/master/GH_demo/PACo.geojson", false);
 xhr.send();
 
 console.log(xhr.status);
