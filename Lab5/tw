@@ -3,15 +3,15 @@
 
 </head>
 <body> 
-
+<script>
 var xhr=new XMLHttpRequest();
-xhr.open("GET","https://github.com/burnsr77/burnsr77.github.io/blob/master/GH_demo/PACo.geojson", false);
+xhr.open("GET", URL, false);
 xhr.send();
 
 console.log(xhr.status);
 console.log(xhr.statusText);
 
-
+</script>
 </body>
 
 </html>
