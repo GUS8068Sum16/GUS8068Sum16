@@ -1,3 +1,4 @@
+<html>
 <head>
 
 
@@ -12,3 +13,5 @@ var APIresponse = xhr.responseText;
 var myJsonDictionary = JSON.parse(xhr.responseText);
 
 </body>
+
+</html>
