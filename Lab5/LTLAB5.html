@@ -1,10 +1,29 @@
 <html>
+  <head>
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
+    </head>
 
+<body>
+<h1>Experimenting with API</h1>
+<h2> Here goes nothing </h2>
 
+<div id="mapid" style="height:800px; width:1200px;"></div>
+<script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+
+ 
 <script>
+ 
+   
+  var mymap = L.map('mapid').setView([29.2021277,-82.0407485], 9);
+L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+  attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+  }).addTo(mymap);
+  
+ 
 var xhr = new XMLHttpRequest();
 xhr.open(GET, http://burnsr77.github.io/GH_demo/PACo.geojson, true)
 xhr.send();
 
+</body>
 </script>
 </html>
