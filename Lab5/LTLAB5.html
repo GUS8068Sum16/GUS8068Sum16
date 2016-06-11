@@ -6,22 +6,95 @@
   <h1> Experimenting </h1>
   <h2> Here goes nothing </h2>
   
+  <div id= "test" style="height:400px; width:400px;"></div>
+  
   <div id="mymap" style="height:800px; width:1200px;"></div>
    <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
     
 <script>
-  var mymap = L.map('mymap').setView([29.2021277,-82.0407485], 9);
-L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-  attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-  }).addTo(mymap);
 
+ function onEachFeature(feature, layer) {
+        layer.bindPopup("<h1>"+feature.properties.name+"</h1><p>"+feature.properties.caption+"</p>");
+       };
+        
+  var mymap = L.map('mapid').setView([28.7735735,-81.9329307], 9);
+  
+    L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/terrain/{z}/{x}/{y}.{ext}', {
+	attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+	subdomains: 'abcd',
+	maxZoom: 18,
+	ext: 'png',
+	bounds: [[22, -132], [70, -56]]
+ }).addTo(mymap);
  
+ 
+var myGeoJSON = {
+   	"type" : "FeatureCollection",
+	"features":[
+		{"type":"Feature",
+		"properties":{
+			"name":"Silver Springs State Park",
+			"caption":"Silver Springs is known for its nature trails, crystal clear springs, and glass bottom boat rides."},
+		"geometry":{"type":"Point","coordinates":[-82.0407485, 29.2021277]}}, 
+		
+		{"type":"Feature",
+		"properties":{
+			"name":"Homosassa Springs State Park",
+			"caption":"Homassassa Springs is a great place to experience Florida's wildlife, including alligators and manatees."},
+		"geometry":{
+			"type":"Point",
+			"coordinates":[-82.5768147, 28.8010481]}},
+		
+		{"type":"Feature",
+		"properties":{
+			"name":"Clearwater Beach",
+			"caption":"One of Florida's most popular gulf coast beaches, known for clear blue waters and white sand beaches."},
+		"geometry":{
+			"type":"Point",
+			"coordinates":[-82.8195094, 27.9874555]}},
+			
+		{"type":"Feature",
+		"properties":{
+			"name":"Walt Disney World",
+			"caption":"This world famous theme park, located in Orlando, is based on the Walt Disney Company's cartoons, feature films and stage productions."},
+		"geometry":{
+			"type":"Point",
+			"coordinates":[-81.581212, 28.417663]}},
+			
+		{"type":"Feature",
+		"properties":{
+			"name":"Universal Studios",
+			"caption":"Universal Studio's theme park which allows guests an up close experience with Harry Potter and Marvel characters."},
+		"geometry":{
+			"type":"Point",
+			"coordinates":[-81.4678193, 28.4743207]}},
+			
+		{"type":"Feature",
+		"properties":{
+			"name":"Daytona Beach",
+			"caption":"Well known beach on Florida's Atlantic coast."},
+		"geometry":{
+			"type":"Point",
+			"coordinates":[-81.09661, 29.2086838]}}
+   	]};
+   	
+L.geoJson(myGeoJSON, {onEachFeature: onEachFeature}).addTo(mymap);
+  
+  
+  
   
  var xhr = new XMLHttpRequest();
 xhr.open("GET", "http://burnsr77.github.io/GH_demo/PACo.geojson", true);
 xhr.send();
-document.getElementById(‘mymap’); 
- 
+
+var APIresponse = xhr.responseText
+
+document.getElementById(‘test’).innerHTML = API.responseText"; 
+
+var myJsonDictionary = JSON.parse(xhr.responseText)
+myJsonDictionary.features[0].properties.COUNTY_NAM;
+
+
 </script>
 </body>
 </html>
