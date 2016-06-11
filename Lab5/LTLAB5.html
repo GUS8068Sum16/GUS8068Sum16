@@ -87,9 +87,7 @@ L.geoJson(myGeoJSON, {onEachFeature: onEachFeature}).addTo(mymap);
 xhr.open("GET", "http://burnsr77.github.io/GH_demo/PACo.geojson", true);
 xhr.send();
 
-var APIresponse = xhr.responseText
-
-document.getElementById(‘test’).innerHTML = API.responseText"; 
+document.getElementById(‘test’).innerHTML = xhr.responseText"; 
 
 var myJsonDictionary = JSON.parse(xhr.responseText)
 myJsonDictionary.features[0].properties.COUNTY_NAM;
