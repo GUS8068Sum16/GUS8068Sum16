@@ -3,12 +3,17 @@
 
 </head>
 <body> 
+
+  <h1> Working with  API's </h1>
+  <h2> Taryn Weisberg </h2>
+  <div id="box" style="height: 800px; width: 1000px; margin: 0 auto; text-align: center; width: 100%;"></div>
+  
+document.getElementById(‘box’).innerHTML = APIresponse;
+
 <script>
 var xhr=new XMLHttpRequest();
 xhr.open("GET", URL, false);
 xhr.send();
-
-console.log(xhr.status);
 
 
 </script>
