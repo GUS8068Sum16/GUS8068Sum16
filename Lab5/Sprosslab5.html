@@ -20,18 +20,15 @@
 }).addTo(mymap);
 
 var xhr = new XMLHttpRequest();
-var APIresponse = xhr.responseText;
 
-xhr.open("GET","http://burnsr77.github.io/GH_demo/PACo.geojson",false);
+xhr.open("GET", "http://burnsr77.github.io/GH_demo/PACo.geojson", false);
 xhr.send();
 
 var myJsonDictionary = JSON.parse(xhr.responseText);
 
 function onEachFeature(feature, layer) {
     //does this feature have a property named popupContent?
-    if (feature.properties && feature.properties.popupContent) {
         layer.bindPopup(feature.properties.COUNTY_NAM + "<br />" + feature.properties.AREA_SQ_MI);
-    }
 }
 
 L.geoJson(mymap, {onEachFeature: onEachFeature}).addTo(mymap);
