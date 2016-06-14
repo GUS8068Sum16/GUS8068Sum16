@@ -20,6 +20,8 @@
 xhr.open(GET, http://burnsr77.github.io/GH_demo/PACo.geojson, true);
 xhr.send();
 alert (xhr.responseText);
+var APIresponse = xhr.responseText;
+var myJsonDictionary = JSON.parse(xhr.responseText);
  
   </script>
   </body>
