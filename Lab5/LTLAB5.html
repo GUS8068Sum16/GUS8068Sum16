@@ -31,7 +31,7 @@
 xhr.open('GET', 'http://burnsr77.github.io/GH_demo/PACo.geojson', true);
 xhr.send();
 var myJsonDictionary = JSON.parse(xhr.responseText);
-L.geoJson(myJsonDictionary , {onEachFeature: onEachFeature}).addTo(mymap);
+L.geoJson(myJsonDictionary, {onEachFeature: onEachFeature}).addTo(mymap);
 
 
 
