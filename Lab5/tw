@@ -23,8 +23,7 @@ var myJsonDictionary = JSON.parse(xhr.responseText);
 
 
 
-   },
-    onEachFeature: onEachFeature
+   L.geoJson(var){onEachFeature: onEachFeature
 }).addTo(mymap);
 
 
