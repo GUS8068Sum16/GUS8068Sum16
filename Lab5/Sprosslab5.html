@@ -24,14 +24,14 @@
    accessToken: 'pk.eyJ1IjoianNwcm9zczkzIiwiYSI6ImNpcGVtcXo3cTAwMDFzdG5jc2lxdnN1NmEifQ.8-EK8kM2Apv_vSawAqfw0g'
 }).addTo(mymap);
 
-//var xhr = new XMLHttpRequest();
-//var APIresponse = xhr.responseText;
+var xhr = new XMLHttpRequest();
+var APIresponse = xhr.responseText;
 
-//xhr.open("GET","http://burnsr77.github.io/GH_demo/PACo.geojson",false);
-//xhr.send();
+xhr.open("GET","http://burnsr77.github.io/GH_demo/PACo.geojson",false);
+xhr.send();
 
-//var myJsonDictionary = JSON.parse(xhr.responseText);
-//.addTo(mymap);
+var myJsonDictionary = JSON.parse(xhr.responseText);
+.addTo(mymap);
 
 //function onEachFeature(feature, layer, COUNTY_NAM, AREA_SQ_MI) {
     // does this feature have a property named popupContent?
