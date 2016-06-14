@@ -28,7 +28,10 @@ function onEachFeature(feature, layer) {
         layer.bindPopup(feature.properties.name);
     
 }
-
+L.geoJson(PointSet, {
+    style: geojsonMarkerOptions,
+     onEachFeature: onEachFeature
+}).addTo(mymap);
  
   </script>
   </body>
