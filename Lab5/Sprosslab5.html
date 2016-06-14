@@ -28,7 +28,7 @@ var myJsonDictionary = JSON.parse(xhr.responseText);
 
 function onEachFeature(feature, layer) {
     //does this feature have a property named popupContent?
-        layer.bindPopup(feature.properties.COUNTY_NAM + "<br />" + feature.properties.AREA_SQ_MI);
+        layer.bindPopup(feature.properties.COUNTY_NAM + "<br />" + <p>Area (Sq. miles)</p> + feature.properties.AREA_SQ_MI);
 }
 
 L.geoJson(myJsonDictionary, {onEachFeature: onEachFeature}).addTo(mymap);
