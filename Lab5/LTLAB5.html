@@ -86,26 +86,14 @@ L.geoJson(myGeoJSON, {onEachFeature: onEachFeature}).addTo(mymap);
  var xhr = new XMLHttpRequest();
 xhr.open('GET', 'http://burnsr77.github.io/GH_demo/PACo.geojson', true);
 xhr.send();
-
 var myJsonDictionary = JSON.parse(xhr.responseText);
-
 L.geoJson(myGeoJSON, {"xhr.response text"}).addTo(mymap);
 
 
  function onEachFeature(feature, layer) {
-        layer.bindPopup("<h1>"+feature.properties.name+"</h1><p>"+feature.properties.caption+"</p>");
+        layer.bindPopup("<h1>"+feature.properties.COUNTY_NAM+"</h1><p>"+feature.properties.COUNTY_ARE+"</p>");
        };
                 
-
-
-L.geoJson(myGeoJSON, {onEachFeature: onEachFeature}).addTo(mymap);
-
-var APIresponse = xhr.responseText;
-
-document.getElementById(‘test’).innerHTML = xhr.responseText"; 
-
-myJsonDictionary.features[0].properties.COUNTY_NAM;
-
 
   
 
