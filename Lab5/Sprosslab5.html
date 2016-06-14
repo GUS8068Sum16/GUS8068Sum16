@@ -22,7 +22,7 @@
 var xhr = new XMLHttpRequest();
 var APIresponse = xhr.responseText;
 
-xhr.open("GET","http://burnsr77.github.io/GH_demo/PACo.geojson",true);
+xhr.open("GET","http://burnsr77.github.io/GH_demo/PACo.geojson",false);
 xhr.send();
 
 var myJsonDictionary = JSON.parse(xhr.responseText);
