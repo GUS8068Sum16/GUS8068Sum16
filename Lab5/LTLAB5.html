@@ -6,6 +6,7 @@
   <h1> Experimenting </h1>
   <h2> Here goes nothing </h2>
   
+  <div id='test' style="height:800px; width:1200px;"></div>
   <div id="mymap" style="height:800px; width:1200px;"></div>
    <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
     
@@ -31,6 +32,7 @@
 xhr.open("GET", "http://burnsr77.github.io/GH_demo/PACo.geojson", true);
 xhr.send();
 var myjd = JSON.parse(xhr.responseText);
+document.getElementById('test').innerHTML = xhr.responseTest;
 L.geoJson(myjd, {onEachFeature: onEachFeature}).addTo(mymap);
 
 
