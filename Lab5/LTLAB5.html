@@ -28,10 +28,10 @@
  
   
  var xhr = new XMLHttpRequest();
-xhr.open('GET', 'http://burnsr77.github.io/GH_demo/PACo.geojson', true);
+xhr.open("GET", "http://burnsr77.github.io/GH_demo/PACo.geojson", true);
 xhr.send();
-var myJsonDictionary = JSON.parse(xhr.responseText);
-L.geoJson(myJsonDictionary, {onEachFeature: onEachFeature}).addTo(mymap);
+var myjd = JSON.parse(xhr.responseText);
+L.geoJson(myjd, {onEachFeature: onEachFeature}).addTo(mymap);
 
 
   
