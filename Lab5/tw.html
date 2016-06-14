@@ -47,6 +47,10 @@ xhr.send();
 
 var myJsonDictionary = JSON.parse(xhr.responseText);
 
+function onEachFeature(feature, layer) {
+    layer.bindPopup(feature.properties.popupContent+ "<br />" +feature.properties.img);
+    };
+
    L.geoJson(myJsonDictionary, {onEachFeature: onEachFeature
 }).addTo(mymap);
 
