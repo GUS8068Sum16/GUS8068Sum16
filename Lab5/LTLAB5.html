@@ -11,10 +11,6 @@
     
 <script>
 
-  function onEachFeature(feature, layer) {
-        layer.bindPopup("<h1>"+feature.properties.COUNTY_NAM+"</h1><p>"+feature.properties.COUNTY_ARE+"</p>");
-       };
-                
   var mymap = L.map('mymap').setView([-76.6547469,40.2887809], 22);
   
     L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/terrain/{z}/{x}/{y}.{ext}', {
@@ -33,7 +29,9 @@ xhr.send();
 var myJsonDictionary = JSON.parse(xhr.responseText);
 L.geoJson(myJsonDictionary, {onEachFeature: onEachFeature}).addTo(mymap);
 
-
+  function onEachFeature(feature, layer) {
+        layer.bindPopup("<h1>"+feature.properties.COUNTY_NAM+"</h1><p>"+feature.properties.COUNTY_ARE+"</p>");
+       };
 
 
   
