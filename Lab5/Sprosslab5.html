@@ -36,7 +36,7 @@ function onEachFeature(feature, layer) {
 L.featureGroup(['Feature', 'properties' ])
     .bindPopup('COUNTY_NAM', 'AREA_SQ_MI').openPopup();
     .on('click', function() { alert('Clicked on a group!'); })
-    .addTo(mymap);
+L.geoJson(mymap, {onEachFeature: onEachFeature}).addTo(mymap)
 
 </script>
 
