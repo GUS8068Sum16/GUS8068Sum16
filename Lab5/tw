@@ -12,9 +12,13 @@ document.getElementById(‘box’).innerHTML = APIresponse;
 
 <script>
 var xhr=new XMLHttpRequest();
-xhr.open("GET", URL, false);
+xhr.open("GET", "http://burnsr77.github.io/GH_demo/PACo.geojson", true);
 xhr.send();
+var APIresponse = xhr.responseText;
 
+var myJsonDictionary = JSON.parse(xhr.responseText);
+
+OnEachFeature
 
 </script>
 </body>
