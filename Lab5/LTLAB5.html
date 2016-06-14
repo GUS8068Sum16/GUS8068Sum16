@@ -10,6 +10,10 @@
    <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
     
 <script>
+  function onEachFeature(feature, layer) {
+        layer.bindPopup("<h1>"+feature.properties.COUNTY_NAM+"</h1><p>"+feature.properties.COUNTY_ARE+"</p>");
+       };
+
 
   var mymap = L.map('mymap').setView([-76.6547469,40.2887809], 22);
   
@@ -28,10 +32,6 @@ xhr.open('GET', 'http://burnsr77.github.io/GH_demo/PACo.geojson', true);
 xhr.send();
 var myJsonDictionary = JSON.parse(xhr.responseText);
 L.geoJson(myJsonDictionary, {onEachFeature: onEachFeature}).addTo(mymap);
-
-  function onEachFeature(feature, layer) {
-        layer.bindPopup("<h1>"+feature.properties.COUNTY_NAM+"</h1><p>"+feature.properties.COUNTY_ARE+"</p>");
-       };
 
 
   
