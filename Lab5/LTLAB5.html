@@ -87,7 +87,7 @@ L.geoJson(myGeoJSON, {onEachFeature: onEachFeature}).addTo(mymap);
 xhr.open('GET', 'http://burnsr77.github.io/GH_demo/PACo.geojson', true);
 xhr.send();
 var myJsonDictionary = JSON.parse(xhr.responseText);
-L.geoJson(myGeoJSON, {"xhr.response text"}).addTo(mymap);
+L.geoJson(myJsonDictionary , {"xhr.response text"}).addTo(mymap);
 
 
  function onEachFeature(feature, layer) {
