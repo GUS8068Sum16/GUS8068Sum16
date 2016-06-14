@@ -13,11 +13,11 @@
     
 <script>
 
- function onEachFeature(feature, layer) {
-        layer.bindPopup("<h1>"+feature.properties.name+"</h1><p>"+feature.properties.caption+"</p>");
+  function onEachFeature(feature, layer) {
+        layer.bindPopup("<h1>"+feature.properties.COUNTY_NAM+"</h1><p>"+feature.properties.COUNTY_ARE+"</p>");
        };
-        
-  var mymap = L.map('mapid').setView([28.7735735,-81.9329307], 9);
+                
+  var mymap = L.map('mapid').setView(40.2887809,-76.6547469], 9);
   
     L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/terrain/{z}/{x}/{y}.{ext}', {
 	attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
@@ -87,13 +87,10 @@ L.geoJson(myGeoJSON, {onEachFeature: onEachFeature}).addTo(mymap);
 xhr.open('GET', 'http://burnsr77.github.io/GH_demo/PACo.geojson', true);
 xhr.send();
 var myJsonDictionary = JSON.parse(xhr.responseText);
-L.geoJson(myJsonDictionary , {"xhr.response text"}).addTo(mymap);
+L.geoJson(myJsonDictionary , {onEachFeature: onEachFeature}).addTo(mymap);
 
 
- function onEachFeature(feature, layer) {
-        layer.bindPopup("<h1>"+feature.properties.COUNTY_NAM+"</h1><p>"+feature.properties.COUNTY_ARE+"</p>");
-       };
-                
+
 
   
 
