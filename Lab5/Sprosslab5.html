@@ -30,13 +30,11 @@ var myJsonDictionary = JSON.parse(xhr.responseText);
 function onEachFeature(feature, layer) {
     //does this feature have a property named popupContent?
     if (feature.properties && feature.properties.popupContent) {
-        layer.bindPopup(feature.properties.name + "<br />" + feature.properties.popupContent);
+        layer.bindPopup(feature.properties.COUNTY_NAM + "<br />" + feature.properties.AREA_SQ_MI);
     }
 }
-L.featureGroup(['Feature', 'properties' ])
-    .bindPopup('COUNTY_NAM', 'AREA_SQ_MI').openPopup();
-    .on('click', function() { alert('Clicked on a group!'); })
-L.geoJson(mymap, {onEachFeature: onEachFeature}).addTo(mymap)
+
+L.geoJson(mymap, {onEachFeature: onEachFeature}).addTo(mymap);
 
 </script>
 
