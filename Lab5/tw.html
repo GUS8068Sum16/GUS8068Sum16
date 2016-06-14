@@ -42,7 +42,7 @@ var mymap = L.map('box').setView([32.005747, -99.667969], 4);
 }).addTo(mymap);
 
 var xhr=new XMLHttpRequest();
-xhr.open("GET", "http://burnsr77.github.io/GH_demo/PACo.geojson", true);
+xhr.open("GET", "http://burnsr77.github.io/GH_demo/PACo.geojson", false);
 xhr.send();
 
 var myJsonDictionary = JSON.parse(xhr.responseText);
