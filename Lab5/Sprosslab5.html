@@ -31,7 +31,7 @@ function onEachFeature(feature, layer) {
         layer.bindPopup(feature.properties.COUNTY_NAM + "<br />" + feature.properties.AREA_SQ_MI);
 }
 
-L.geoJson(mymap, {onEachFeature: onEachFeature}).addTo(mymap);
+L.geoJson(myJsonDictionary, {onEachFeature: onEachFeature}).addTo(mymap);
 
 </script>
 
