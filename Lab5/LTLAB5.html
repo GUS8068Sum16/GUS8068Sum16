@@ -29,7 +29,7 @@
  
   
  var xhr = new XMLHttpRequest();
-xhr.open("GET", "http://burnsr77.github.io/GH_demo/PACo.geojson", true);
+xhr.open("GET", "http://burnsr77.github.io/GH_demo/PACo.geojson", false);
 xhr.send();
 //var myjd = JSON.parse(xhr.responseText);
 document.getElementById('test').innerHTML = xhr.responseText;
