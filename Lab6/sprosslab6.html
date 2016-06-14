@@ -21,6 +21,9 @@ var tileLayer = L.tileLayer('https://{s}.tiles.mapbox.com/v4/{mapId}/{z}/{x}/{y}
     subdomains: ['a','b','c','d'],
     mapId: 'jspross93.0d4ecll6',
     token: 'pk.eyJ1IjoianNwcm9zczkzIiwiYSI6ImNpcGVtcXo3cTAwMDFzdG5jc2lxdnN1NmEifQ.8-EK8kM2Apv_vSawAqfw0g'
+});
+
+tileLayer.addTo(mymap);
 
 //L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}', {
 //	attribution: 'Tiles &copy; Esri &mdash; National Geographic, Esri, DeLorme, NAVTEQ, UNEP-WCMC, USGS, NASA, ESA, METI, NRCAN, GEBCO, NOAA, iPC',
