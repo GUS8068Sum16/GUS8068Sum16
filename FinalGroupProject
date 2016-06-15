@@ -1,0 +1,45 @@
+<html>
+<head>
+
+  <style>
+    body {background-color: rgb(199,0,57);}
+    
+    h1 {text-align: center;}
+    h1 {color: rgb (255, 255, 255);}
+    h1 {font-family: Georgia
+          font-style:normal;
+          font-weight: bold;}
+          
+    h2 {text-align: center;}
+    h2 {color: rgb (255,255,255);}
+    h2 {font-family: Georgia
+          font-style: italic;
+          font-weight: normalc;}
+          
+    div {border-style: outset;
+          border-color: rgb (0,0,0);}
+          
+  </style>
+  
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
+
+</head>
+
+<body>
+
+    <h1> Temple University Main Campus Map </h1>
+    <h2>Use this map to find your way around Temple University Main Campus in Philadelphia>
+    <div id="tumap" style="height:100%; width:100%;"></div>
+     <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+     
+     <script>
+     
+      var tumap = L.map('tumap').setView([39.9802519,-75.1662968], 11);
+      
+    </script>
+
+
+
+</body>
+</head>
+</html>
