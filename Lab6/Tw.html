@@ -46,7 +46,7 @@ xhr.send();
 var myJsonDictionary = JSON.parse(xhr.responseText);
 
 function onEachFeature(feature, layer) {
-    layer.bindPopup(feature.properties.coordinates+ "<br />" +feature.properties.score);
+    layer.bindPopup(feature.properties.OBJECTID+ "<br />" +feature.properties.SCORE);
     };
 
    L.geoJson(myJsonDictionary, {onEachFeature: onEachFeature
