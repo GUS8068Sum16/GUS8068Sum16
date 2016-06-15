@@ -42,7 +42,7 @@ var mymap = L.map('box').setView([40.90521, -77.827148], 8);
 }).addTo(mymap);
 
 var xhr=new XMLHttpRequest();
-xhr.open("GET", "https://www.openstreetmap.org/export#map=17/39.98062/-75.15264", false);
+xhr.open("GET", "http://burnsr77.github.io/GH_demo/PACo.geojson", false);
 xhr.send();
 
 var myJsonDictionary = JSON.parse(xhr.responseText);
