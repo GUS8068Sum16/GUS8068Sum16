@@ -39,4 +39,21 @@ var CartoDB_DarkMatter = L.tileLayer('http://{s}.basemaps.cartocdn.com/dark_all/
 	maxZoom: 19
 }).addTo(mymap);
 
+var xhr=new XMLHttpRequest();
+xhr.open("GET", "http://data.phl.opendata.arcgis.com/datasets/4bb9bed7707b4704833b293ddb13f7b1_0.geojson", false);
+xhr.send();
+
+var myJsonDictionary = JSON.parse(xhr.responseText);
+
+function onEachFeature(feature, layer) {
+    layer.bindPopup(feature.properties.coordinates+ "<br />" +feature.properties.score);
+    };
+
+   L.geoJson(myJsonDictionary, {onEachFeature: onEachFeature
+}).addTo(mymap);
+
+
 </script>
+</body>
+
+</html>
