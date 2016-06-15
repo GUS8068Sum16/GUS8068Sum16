@@ -46,6 +46,13 @@
  var tudata = {
 	"type"    : "FeatureCollection",
 	"features": [{
+		{
+    "type": "Feature",
+    "properties": {
+        "name": "Paley Library",
+        "amenity": "Library",
+       // "popupContent": "Here you can rent books, movies, and use their computers"
+    },
 	  "geometry": {
         "type": "Polygon",
         "coordinates": [[
@@ -56,7 +63,7 @@
         ]]
     }
 }
-      
+ }  
       L.geoJson(tudata, {
     onEachFeature: onEachFeature
 }).addTo(tumap);
