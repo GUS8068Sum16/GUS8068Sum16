@@ -69,32 +69,8 @@ var tudata = {
             [-75.155036, 39.980769]
         ]]
     }
-},
-{
-    "type": "Feature",
-    "properties": {
-        "name": "Snyder Middleswarth",
-        "amenity": "Old Growth Forest",
-        "popupContent": "250 acres - Eastern Hemlock, Eastern White Pine, Pitch Pine"
-    },
-    "geometry": {
-        "type": "Point",
-        "coordinates": [-77.1659, 40.4836]
-    }
-},
-{
-    "type": "Feature",
-    "properties": {
-        "name": "Hearts Content",
-        "amenity": "Old Growth Forest",
-        "popupContent": "122 acres - Eastern White Pine, Eastern Hemlock, American Beech"
-    },
-    "geometry": {
-        "type": "Point",
-        "coordinates": [-79.15152, 41.41333]
-    }
-}]
 }
+
 L.geoJson(tudata, {
     onEachFeature: onEachFeature
 }).addTo(tumap);
