@@ -49,10 +49,63 @@ function onEachFeature(feature, layer) {
         layer.bindPopup(feature.properties.name + "<br />" + feature.properties.popupContent);
     }
 }
+
 var tudata = {
 	"type"    : "FeatureCollection",
 	"features": [{
-   
+    "type": "Feature",
+    "properties": {
+        "name": "Ricketts Glen",
+        "amenity": "Old Growth Forest",
+        "popupContent": "2000 acres - Northern Hardwood Forest"
+    },
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-76.1646,41.1934]
+    }
+},
+{
+    "type": "Feature",
+    "properties": {
+        "name": "Tionesta",
+        "amenity": "Old Growth Forest",
+        "popupContent": "4000 acres - Eastern Hemlock, American Beech, Sugar Maple"
+    },
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-78.5614, 41.3838]
+    }
+},
+{
+    "type": "Feature",
+    "properties": {
+        "name": "Cooks Forest",
+        "amenity": "Old Growth Forest",
+        "popupContent": "1500-2000 acres - Eastern White Pine, Eastern Hemlock, Northern Red Oak, White Oak, etc."
+    },
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-79.0950, 41.1925]
+    }
+},
+{
+    "type": "Feature",
+    "properties": {
+        "name": "Bear Meadows",
+        "amenity": "Old Growth Forest",
+        "popupContent": "320 acres - Black Spruce, Balsam Fir bog"
+    },
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-77.4550, 40.4345]
+    }
+},
+{
+    "type": "Feature",
+    "properties": {
+        "name": "Holtwood Preserve",
+        "amenity": "Old Growth Forest",
+        "popupContent": "200 acres - Chestnut Oak, Eastern Hemlock, Umbrella Magnolia"
     },
     "geometry": {
         "type": "Polygon",
