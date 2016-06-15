@@ -42,6 +42,56 @@
     id: 'jspross93.0d4ecll6',
    accessToken: 'pk.eyJ1IjoianNwcm9zczkzIiwiYSI6ImNpcGVtcXo3cTAwMDFzdG5jc2lxdnN1NmEifQ.8-EK8kM2Apv_vSawAqfw0g'
 }).addTo(tumap);
+
+function onEachFeature(feature, layer) {
+    // does this feature have a property named popupContent?
+    if (feature.properties && feature.properties.popupContent) {
+        layer.bindPopup(feature.properties.name + "<br />" + feature.properties.popupContent);
+    }
+}
+var tudata = {
+	"type"    : "FeatureCollection",
+	"features": [{
+   
+    },
+    "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+            [-76.3178444,39.8465093],
+            [-76.318636,39.8401143],
+            [-76.3318205,39.8332203],
+            [-76.3386277,39.8470818]
+        ]]
+    }
+},
+{
+    "type": "Feature",
+    "properties": {
+        "name": "Snyder Middleswarth",
+        "amenity": "Old Growth Forest",
+        "popupContent": "250 acres - Eastern Hemlock, Eastern White Pine, Pitch Pine"
+    },
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-77.1659, 40.4836]
+    }
+},
+{
+    "type": "Feature",
+    "properties": {
+        "name": "Hearts Content",
+        "amenity": "Old Growth Forest",
+        "popupContent": "122 acres - Eastern White Pine, Eastern Hemlock, American Beech"
+    },
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-79.15152, 41.41333]
+    }
+}]
+}
+L.geoJson(forestdata, {
+    onEachFeature: onEachFeature
+}).addTo(mymap);
       
     </script>
 
