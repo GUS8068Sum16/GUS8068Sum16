@@ -30,12 +30,13 @@
   <div id="mapid" style="height: 800px; width: 1000px; margin: 0 auto; text-align: center; width: 100%;"></div>
  
   <script>
+  
  var mymap = L.map('mapid').setView([32.005747, -99.667969], 4); 
  
-
-
 var CartoDB_DarkMatter = L.tileLayer('http://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png', {
 	attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="http://cartodb.com/attributions">CartoDB</a>',
 	subdomains: 'abcd',
 	maxZoom: 19
 }).addTo(mymap);
+
+</script>
