@@ -20,12 +20,10 @@
 xhr.open("GET", "http://burnsr77.github.io/GH_demo/PACo.geojson", false);
 xhr.send();
 var myJsonDictionary = JSON.parse(xhr.responseText);
-function onEachFeature(feature, layer) {
-   
-   
-        layer.bindPopup(feature.properties.name);
-    
-}
+ function onEachFeature(feature, layer) {
+        layer.bindPopup("<h1>"+feature.properties.COUNTY_NAM+"</h1><p>"+feature.properties.AREA_SQ_MI+"</p>");
+       };
+
 L.geoJson(myJsonDictionary, {onEachFeature: onEachFeature}).addTo(mymap);
  
   </script>
