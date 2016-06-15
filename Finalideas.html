@@ -146,6 +146,14 @@ var tudata = {
 L.geoJson(tudata, {
     onEachFeature: onEachFeature
 }).addTo(tumap);
+
+var myStyle = {
+    "color": "#C70039"
+};
+
+L.geoJson(tudata, {
+    style: myStyle
+}).addTo(tumap);
       
     </script>
 
