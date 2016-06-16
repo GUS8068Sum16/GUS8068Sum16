@@ -52,8 +52,7 @@
 
 //var myJsonDictionary = JSON.parse(xhr.responseText);
 
-L.geoJson(geojsonFeature, {onEachFeature: onEachFeature
-}).addTo(tumap);
+
 
 function onEachFeature(feature, layer) {
     if (feature.properties && feature.properties.name) {
@@ -27947,7 +27946,8 @@ var geojsonFeature = {
         }
     ]
 
-      
+      L.geoJson(geojsonFeature, {onEachFeature: onEachFeature
+}).addTo(tumap);
 
       
     </script>
