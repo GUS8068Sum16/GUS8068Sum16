@@ -68,8 +68,26 @@ var tudata = {
             [-75.153966, 39.980621],
             [-75.155036, 39.980769]
         ]]
-    }
-};
+    }]
+},
+ "type": "Feature",
+    "properties": {
+        "name": "Paley Learning Center",
+        "amenity": "classrooms",
+        "popupContent": "classrooms, Fresh Bytes Cafe"
+    },
+    "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+            [39.980714, -75.155063],
+            [39.980411, -75.153987],
+            [39.980294, -75.153998],
+            [39.980383, -75.154754],
+            [39.979965, -75.154851],
+            [39.980116, -75.155135]
+        ]]
+    }]
+}
 
 L.geoJson(tudata, {
     onEachFeature: onEachFeature
