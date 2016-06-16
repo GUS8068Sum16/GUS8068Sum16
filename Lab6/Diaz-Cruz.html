@@ -14,6 +14,7 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token='
     id: 'mapbox.light',
     attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>'
 }).addTo(map);
+L.geoJson(statesData).addTo(map);
 function getColor(d) {
     return d > 1000 ? '#800026' :
            d > 500  ? '#BD0026' :
@@ -24,8 +25,6 @@ function getColor(d) {
            d > 10   ? '#FED976' :
                       '#FFEDA0';
 }
-
-L.geoJson(statesData).addTo(map);
 </script>
 </body>
 </html>
