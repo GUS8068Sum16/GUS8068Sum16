@@ -45,6 +45,16 @@
    accessToken: 'pk.eyJ1IjoianNwcm9zczkzIiwiYSI6ImNpcGVtcXo3cTAwMDFzdG5jc2lxdnN1NmEifQ.8-EK8kM2Apv_vSawAqfw0g'
 }).addTo(tumap);
 
+//var xhr = new XMLHttpRequest();
+      
+//xhr.open("GET", "file:///G:/TEMPLE%20U/Web%20GIS/tu%20data.osm", false);
+//xhr.send();
+
+//var myJsonDictionary = JSON.parse(xhr.responseText);
+
+L.geoJson(geojsonFeature, {onEachFeature: onEachFeature
+}).addTo(tumap);
+
 function onEachFeature(feature, layer) {
     //if (feature.properties && feature.properties.name) {
         layer.bindPopup(feature.properties.name);
@@ -27938,15 +27948,7 @@ var geojsonFeature = {
     ]
 }
       
-//var xhr = new XMLHttpRequest();
-      
-//xhr.open("GET", "file:///G:/TEMPLE%20U/Web%20GIS/tu%20data.osm", false);
-//xhr.send();
 
-//var myJsonDictionary = JSON.parse(xhr.responseText);
-
-L.geoJson(geojsonFeature, {onEachFeature: onEachFeature
-}).addTo(tumap);
       
     </script>
     
