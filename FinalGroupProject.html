@@ -54,7 +54,7 @@
       
 var xhr = new XMLHttpRequest();
       
-xhr.open("GET", " http://overpass-api.de/api/xapi?map?bbox=-75.16196,39.97636,-75.14511,39.98475]", false);
+xhr.open("GET", "http://overpass-api.de/api/xapi?map?bbox=-75.16196,39.97636,-75.14511,39.98475", false);
 xhr.send();
 
 var myJsonDictionary = JSON.parse(xhr.responseText);
