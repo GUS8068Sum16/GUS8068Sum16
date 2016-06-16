@@ -51,7 +51,7 @@
 //}
 
 function onEachFeature(feature, layer) {
-    if (feature.properties && feature.properties.tags.name) {
+  //  if (feature.properties && feature.properties.tags.name) {
         layer.bindPopup(feature.properties.tags.name);
         //for when we are ready with the feature
     };
