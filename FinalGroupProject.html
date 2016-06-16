@@ -38,7 +38,7 @@
      
       var tumap = L.map('tumap').setView([39.981450,-75.154386], 17);
       
-        L.tileLayer('', {
+        L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
     attribution: 'Contributors Laura, Jodie, Eli, Taryn',
     maxZoom: 18,
     id: 'jspross93.0d4ecll6',
