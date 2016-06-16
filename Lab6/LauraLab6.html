@@ -26,28 +26,16 @@
 <body>
 
   <h1> Pennsylvania Counties</h1>
-  <h2> THe counties of Pennsylvania</h2>
+  <h2> The counties of Pennsylvania</h2>
   
   <div id="mapid" style="height:100%; width:100%;"></div>
    <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
     
 <script>
-function onEachFeature(feature, layer) {
-        layer.bindPopup("<h1>"+feature.properties.name+"</h1><p>"+feature.properties.caption+"</p>");
-       };
-        
-  var mymap = L.map('mapid').setView([40.7880741,-77.8875908], 9);
+
+  var mymap = L.map('mapid').setView([-77.8875908, 40.7880741], 9);
   
-    L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/terrain/{z}/{x}/{y}.{ext}', {
-	attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
-	subdomains: 'abcd',
-	maxZoom: 18,
-	ext: 'png',
-	bounds: [[22, -132], [70, -56]]
- }).addTo(mymap);
- 
- 
-// var myGeoJSON = {
+    // var myGeoJSON = {
    	"type" : "FeatureCollection",
 	"features":[
 		{"type":"Feature",
