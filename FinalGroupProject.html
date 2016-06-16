@@ -1,8 +1,6 @@
 <html>
 <head>
 
-Authorization: Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ==
-
  <script>document.execCommand('ClearAuthenticationCache', 'false');</script>
 
   <style>
@@ -58,7 +56,7 @@ Authorization: Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ==
       
 var xhr = new XMLHttpRequest();
       
-xhr.open("GET", "/api/0.6/map?bbox=-75.16196,39.97636,-75.14511,39.98475", false);
+xhr.open("GET", "http://api.openstreetmap.org/api/0.6/map?bbox=-75.16196,39.97636,-75.14511,39.98475", false);
 xhr.send();
 
 var myJsonDictionary = JSON.parse(xhr.responseText);
