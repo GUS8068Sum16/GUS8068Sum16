@@ -59,6 +59,7 @@ function onEachFeature(feature, layer) {
     if (feature.properties && feature.properties.name) {
         layer.bindPopup(feature.properties.name);
         //for when we are ready with the feature
+    }
     };
     
 var geojsonFeature = {
