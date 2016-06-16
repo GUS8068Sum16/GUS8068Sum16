@@ -18,18 +18,7 @@
           
        div {border-style: outset;		
             border-color: #000000;}
-        
-<div>
- <fieldset>
-  <legend>Legend</legend>
-  Dormitory buildings <input type="color = #C70039"><br>
-  Educational buildings <input type="color = #FFFFFF">
- </fieldset>
-</div>    
-            
 
-          
-          
   </style>
   
     <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
@@ -37,17 +26,15 @@
 </head>
 
 <body>
+  
+  <div id='mapid' style="height:80px;">
+ <fieldset>
+  <legend>Legend</legend>
+  Dormitory buildings <input type="color = #C70039"><br>
+  Educational buildings <input type="color = #FFFFFF">
+ </fieldset>
+</div>    
 
-<div class="container">
-		<div class="box">
-			<b>Goooogle</b>
-			<form action="">
-				<input type="text" name="" id=""><br>
-				<input type="submit" value="Search">
-			</form>
-		</div>
-	</div>
-	
     <h1> Temple University Main Campus Map </h1>
     <h2>Use this map to find your way around Temple University Main Campus in Philadelphia </h2>
     <div id="tumap" style="height:100%; width:100%;"></div>
