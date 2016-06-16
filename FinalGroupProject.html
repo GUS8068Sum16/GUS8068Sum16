@@ -56,7 +56,7 @@ L.geoJson(geojsonFeature, {onEachFeature: onEachFeature
 }).addTo(tumap);
 
 function onEachFeature(feature, layer) {
-   // if (feature.properties && feature.properties.name) {
+    if (features.properties && features.properties.name) {
         layer.bindPopup(features.properties.name);
         //for when we are ready with the feature
     };
