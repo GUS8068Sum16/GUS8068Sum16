@@ -1,22 +1,22 @@
 <html>
 <head>
 	<style>
-	body { background-color: rgb(237,248,251);}
+	body { background-color: rgb(74, 225, 163);}
 	
 	h1 { text-align: center;}
-	h1 { color: rgb(1,108,89);}
+	h1 { color: rgb(255, 255, 255);}
 	h1 {font-family: Georgia
 		font-style: normal;
 		font-weight: bold;}
 	
 	h2 { text-align: center;}
-	h2 { color: rgb(1,108,89);}
+	h2 { color: rgb(0,0,0);}
 	h2 {font-family: Georgia
 		font-style: italic;
 		font-weight: normal;}
 		
 	div {border-style: outset;
-		border-color: rgb(43,140,190);
+		border-color: rgb(58, 0, 255);
 	}
 	
 	</style>
@@ -47,7 +47,7 @@ function onEachFeature(feature, layer) {
  }).addTo(mymap);
  
  
-var myGeoJSON = {
+// var myGeoJSON = {
    	"type" : "FeatureCollection",
 	"features":[
 		{"type":"Feature",
@@ -96,8 +96,9 @@ var myGeoJSON = {
 			"type":"Point",
 			"coordinates":[-81.09661, 29.2086838]}}
    	]};
-   	
-L.geoJson(myGeoJSON, {onEachFeature: onEachFeature}).addTo(mymap);
+   // 
+   
+// L.geoJson(myGeoJSON, {onEachFeature: onEachFeature}).addTo(mymap); //
   </script>
   
 </body>
