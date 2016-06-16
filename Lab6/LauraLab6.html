@@ -33,9 +33,15 @@
     
 <script>
 
-  var mymap = L.map('mapid').setView([-77.8875908, 40.7880741], 9);
+  var mymap = L.map('mapid').setView([40.7880741, -77.8875908], 9);
   
-  
+    L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/terrain/{z}/{x}/{y}.{ext}', {
+	attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+	subdomains: 'abcd',
+	maxZoom: 18,
+	ext: 'png',
+	bounds: [[22, -132], [70, -56]]
+ }).addTo(mymap);
   
   </script>
   
