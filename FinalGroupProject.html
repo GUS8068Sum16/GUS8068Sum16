@@ -52,7 +52,7 @@ function onEachFeature(feature, layer) {
     }
 };
 
-{
+var geojsonFeature = {
     "type": "FeatureCollection",
     "features": [
         {
@@ -27946,7 +27946,7 @@ function onEachFeature(feature, layer) {
 
 //var myJsonDictionary = JSON.parse(xhr.responseText);
 
-//L.geoJson(myJsonDictionary, {onEachFeature: onEachFeature}).addTo(tumap);
+L.geoJson(geojsonFeature).addTo(tumap);
       
     </script>
     
