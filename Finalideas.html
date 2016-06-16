@@ -55,7 +55,7 @@ var tudata = {
 	"type"    : "FeatureCollection",
 	"features": [{
     "type": "Feature",
-    "properties": {
+    "properties": 
         "name": "Samuel Paley Library",
         "amenity": "library",
         "popupContent": "Here you can rent books, videos, and utilize many other resources"
@@ -69,6 +69,7 @@ var tudata = {
             [-75.155036, 39.980769]
         ]]
     }
+}
 },
 
  "type": "Feature",
@@ -88,13 +89,14 @@ var tudata = {
             [-75.155135, 39.980116]
         ]]
     }
+    }
 }
 
 L.geoJson(tudata, {
     onEachFeature: onEachFeature
 }).addTo(tumap);
       
-    </script>
+       </script>
 
 </body>
 </head>
