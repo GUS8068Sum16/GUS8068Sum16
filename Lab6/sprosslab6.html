@@ -34,13 +34,14 @@ function getColor(d) {
            
 }
 
-//var xhr = new XMLHttpRequest();
+var xhr = new XMLHttpRequest();
 
-//var APIresponse = xhr.responseText;
+xhr.open("GET","http://leafletjs.com/examples/us-states.js", false);
+xhr.send();
 
-//xhr.open("GET","http://leafletjs.com/examples/us-states.js",false);
+var APIResponse = JSON.parse(xhr.responseText)
 
-//xhr.send();
+L.geoJson(APIResponsey, {onEachFeature: onEachFeature}).addTo(mymap);
 
 </script>
 </body>
