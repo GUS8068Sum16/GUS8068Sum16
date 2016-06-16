@@ -45,6 +45,12 @@
    accessToken: 'pk.eyJ1IjoianNwcm9zczkzIiwiYSI6ImNpcGVtcXo3cTAwMDFzdG5jc2lxdnN1NmEifQ.8-EK8kM2Apv_vSawAqfw0g'
 }).addTo(tumap);
 
+function onEachFeature(feature, layer) {
+    if (feature.properties && feature.properties.popupContent) {
+        layer.bindPopup(feature.properties.popupContent);
+        //for when we are ready with the feature
+    }
+};
       
     </script>
 
