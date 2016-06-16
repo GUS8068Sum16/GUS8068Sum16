@@ -53,11 +53,8 @@
 //};
       
 var xhr = new XMLHttpRequest();
-
-xhr.open("GET", "http://api.openstreetmap.org/api/0.6/permissions", false);
-xhr.send();
       
-xhr.open("GET", "http://api.openstreetmap.org/api/0.6/map?bbox=-75.16196,39.97636,-75.14511,39.98475", false);
+xhr.open("GET", "http://overpass.osm.rambler.ru/cgi/xapi_meta?*[bbox=-75.16196,39.97636,-75.14511,39.98475]", false);
 xhr.send();
 
 var myJsonDictionary = JSON.parse(xhr.responseText);
