@@ -1,1 +1,106 @@
+<html>
+<head>
+	<style>
+	body { background-color: rgb(237,248,251);}
+	
+	h1 { text-align: center;}
+	h1 { color: rgb(1,108,89);}
+	h1 {font-family: Georgia
+		font-style: normal;
+		font-weight: bold;}
+	
+	h2 { text-align: center;}
+	h2 { color: rgb(1,108,89);}
+	h2 {font-family: Georgia
+		font-style: italic;
+		font-weight: normal;}
+		
+	div {border-style: outset;
+		border-color: rgb(43,140,190);
+	}
+	
+	</style>
+	
+  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
+</head>
+<body>
 
+  <h1> Pennsylvania Counties</h1>
+  <h2> THe counties of Pennsylvania</h2>
+  
+  <div id="mapid" style="height:100%; width:100%;"></div>
+   <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+    
+<script>
+function onEachFeature(feature, layer) {
+        layer.bindPopup("<h1>"+feature.properties.name+"</h1><p>"+feature.properties.caption+"</p>");
+       };
+        
+  var mymap = L.map('mapid').setView([40.7880741,-77.8875908], 9);
+  
+    L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/terrain/{z}/{x}/{y}.{ext}', {
+	attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+	subdomains: 'abcd',
+	maxZoom: 18,
+	ext: 'png',
+	bounds: [[22, -132], [70, -56]]
+ }).addTo(mymap);
+ 
+ 
+var myGeoJSON = {
+   	"type" : "FeatureCollection",
+	"features":[
+		{"type":"Feature",
+		"properties":{
+			"name":"Silver Springs State Park",
+			"caption":"Silver Springs is known for its nature trails, crystal clear springs, and glass bottom boat rides."},
+		"geometry":{"type":"Point","coordinates":[-82.0407485, 29.2021277]}}, 
+		
+		{"type":"Feature",
+		"properties":{
+			"name":"Homosassa Springs State Park",
+			"caption":"Homassassa Springs is a great place to experience Florida's wildlife, including alligators and manatees."},
+		"geometry":{
+			"type":"Point",
+			"coordinates":[-82.5768147, 28.8010481]}},
+		
+		{"type":"Feature",
+		"properties":{
+			"name":"Clearwater Beach",
+			"caption":"One of Florida's most popular gulf coast beaches, known for clear blue waters and white sand beaches."},
+		"geometry":{
+			"type":"Point",
+			"coordinates":[-82.8195094, 27.9874555]}},
+			
+		{"type":"Feature",
+		"properties":{
+			"name":"Walt Disney World",
+			"caption":"This world famous theme park, located in Orlando, is based on the Walt Disney Company's cartoons, feature films and stage productions."},
+		"geometry":{
+			"type":"Point",
+			"coordinates":[-81.581212, 28.417663]}},
+			
+		{"type":"Feature",
+		"properties":{
+			"name":"Universal Studios",
+			"caption":"Universal Studio's theme park which allows guests an up close experience with Harry Potter and Marvel characters."},
+		"geometry":{
+			"type":"Point",
+			"coordinates":[-81.4678193, 28.4743207]}},
+			
+		{"type":"Feature",
+		"properties":{
+			"name":"Daytona Beach",
+			"caption":"Well known beach on Florida's Atlantic coast."},
+		"geometry":{
+			"type":"Point",
+			"coordinates":[-81.09661, 29.2086838]}}
+   	]};
+   	
+L.geoJson(myGeoJSON, {onEachFeature: onEachFeature}).addTo(mymap);
+  </script>
+  
+</body>
+</html>
+Status API Training Shop Blog About
+© 2016 GitHub, Inc. Terms Privacy Security Contact Help
