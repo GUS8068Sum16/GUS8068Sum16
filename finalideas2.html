@@ -44,12 +44,18 @@
    accessToken: 'pk.eyJ1IjoianNwcm9zczkzIiwiYSI6ImNpcGVtcXo3cTAwMDFzdG5jc2lxdnN1NmEifQ.8-EK8kM2Apv_vSawAqfw0g'
 }).addTo(tumap);
 
+//function onEachFeature(feature, layer) {
+  //  if (feature.properties && feature.properties.popupContent) {
+    //    layer.bindPopup(feature.properties.name + "<br />" + feature.properties.popupContent);
+    //}
+//}
+
 function onEachFeature(feature, layer) {
-    // does this feature have a property named popupContent?
-    if (feature.properties && feature.properties.popupContent) {
+   // if (feature.properties && feature.properties.name && feature.properties.popupContent) {
         layer.bindPopup(feature.properties.name + "<br />" + feature.properties.popupContent);
-    }
-}
+        //for when we are ready with the feature
+    };
+
 var tudata = {
     "type": "FeatureCollection",
     "features": [
