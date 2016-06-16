@@ -38,15 +38,6 @@
      
       var tumap = L.map('tumap').setView([39.981450,-75.154386], 17);
       
-      layers: [
-  new tumap.layer.Tile({
-    source: new tumap.source.OSM({
-      url: 'http://tile-server-ip/osm/{z}/{x}/{y}.png',
-      crossOrigin: null
-    })
-  })
-],
-      
         L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
     attribution: 'Contributors Elijah Diaz-Cruz, Jodie Spross, Laura Trzaska & Taryn Weisberg',
     maxZoom: 18,
