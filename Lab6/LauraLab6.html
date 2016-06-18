@@ -16,7 +16,7 @@
 		font-weight: normal;}
 		
 	div {border-style: outset;
-		border-color: rgb(58, 0, 255);
+		border-color: #FAFAF7 ;
 	}
 	
 	</style>
@@ -42,6 +42,16 @@
 	ext: 'png',
 	bounds: [[22, -132], [70, -56]]
  }).addTo(mymap);
+  
+  
+  
+ var xhr = new XMLHttpRequest();
+xhr.open("GET", "http://burnsr77.github.io/GH_demo/PACo.geojson", false);
+xhr.send();
+var myjd = JSON.parse(xhr.responseText);
+L.geoJson(myjd, {onEachFeature: onEachFeature}).addTo(mymap);
+
+  
   
   </script>
   
