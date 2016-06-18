@@ -46,7 +46,7 @@
   
   
  var xhr = new XMLHttpRequest();
-xhr.open("GET", "http://burnsr77.github.io/GH_demo/PACo.geojson", false);
+xhr.open("GET", "http://maps.pasda.psu.edu/arcgis/sdk/rest/index.html#//02ss0000006v000000", false);
 xhr.send();
 var myjd = JSON.parse(xhr.responseText);
 L.geoJson(myjd, {onEachFeature: onEachFeature}).addTo(mymap);
