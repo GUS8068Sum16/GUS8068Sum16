@@ -184,6 +184,23 @@ geojson = L.geoJson(litter, {
   var basemap = basemaps.value;
   setBasemap(basemap);
   }
+  
+  var info = L.control();
+
+info.onAdd = function (map) {
+    this._div = L.DomUtil.create('div', 'info'); 
+    this.update();
+    return this._div;
+};
+
+info.update = function (props) {
+    this._div.innerHTML = '<h4>Litter Index in Philadelphia</h4>' +  (props ?
+        '<b>' + props.name + '</b><br />' + props.density + ' people / mi<sup>2</sup>'
+        : 'Hover over a state');
+};
+
+info.addTo(mymap);
+  
 </script>
 
 </body>
