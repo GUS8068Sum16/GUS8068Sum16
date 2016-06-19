@@ -26,8 +26,28 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token='
 
 L.geoJson(pa).addTo(mymap);
 
-//var grayscale = L.tileLayer(mapboxUrl, {id: 'mapbox.light', attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>'})
+function getColor(d) {
+    return d > 2000000 ? '#4a1486' :
+           d > 500000  ? '#6a51a3' :
+           d > 250000  ? '#807dba' :
+           d > 100000  ? '#9e9ac8' :
+           d > 50000   ? '#bcbddc' :
+           d > 10000   ? '#dadaeb' :
+                      '#f2f0f7';
+}
 
+function style(feature) {
+    return {
+        fillColor: getColor(feature.properties.F2),
+        weight: 2,
+        opacity: 1,
+        color: 'white',
+        dashArray: '3',
+        fillOpacity: 0.6
+    };
+}
+
+L.geoJson(statesData, {style: style}).addTo(map);
 
 </script>
 </body>
