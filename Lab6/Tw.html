@@ -48,8 +48,9 @@ function onEachFeature(feature, layer) {
     return d > 4 ? '#800026' :
            d > 3 ? '#BD0026' :
            d > 2 ? '#E31A1C' :
-           d > 1 ? '#FC4E2A' ;
-     }
+           d > 1 ? '#FC4E2A' :
+                   '#FFEDA0';
+                                 }
 
 L.geoJson(litter, {onEachFeature: onEachFeature
 }).addTo(mymap);
