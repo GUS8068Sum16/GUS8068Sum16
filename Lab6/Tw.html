@@ -101,7 +101,7 @@ function onEachFeature(feature, layer) {
     });
 }
 
-geojson = L.geoJson(Litter, {
+geojson = L.geoJson(litter, {
     style: style,
     onEachFeature: onEachFeature
 }).addTo(mymap);
