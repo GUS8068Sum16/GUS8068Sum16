@@ -37,15 +37,6 @@ function getColor(d) {
                          '#fcfbfd';
 }
 
-/*'#4a1486'
-'#6a51a3'
-'#807dba'
-'#9e9ac8'
-'#bcbddc'
-'#dadaeb'
-'#efedf5'
-'#fcfbfd'*/
-
 function style(feature) {
     return {
         fillColor: getColor(feature.properties.F2),
@@ -55,6 +46,20 @@ function style(feature) {
         dashArray: '3',
         fillOpacity: 0.8
     };
+}
+
+function highlightFeature(e) {
+    var layer = e.target;
+
+    layer.setStyle({
+        weight: 5,
+        color: '#666',
+        dashArray: '',
+        fillOpacity: 0.7
+    });
+    
+function resetHighlight(e) {
+    geojson.resetStyle(e.target);
 }
 
 L.geoJson(pa, {style: style}).addTo(mymap);
