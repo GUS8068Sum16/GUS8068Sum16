@@ -28,13 +28,23 @@ L.geoJson(pa).addTo(mymap);
 
 function getColor(d) {
     return d > 2000000 ? '#4a1486' :
-           d > 500000  ? '#6a51a3' :
-           d > 250000  ? '#807dba' :
-           d > 100000  ? '#9e9ac8' :
-           d > 50000   ? '#bcbddc' :
-           d > 10000   ? '#dadaeb' :
-                      '#f2f0f7';
+           d > 1000000 ? '#6a51a3' :
+           d > 500000  ? '#807dba' :
+           d > 250000  ? '#9e9ac8' :
+           d > 100000  ? '#bcbddc' :
+           d > 50000   ? '#dadaeb' :
+           d > 10000   ? '#efedf5' :
+                         '#fcfbfd';
 }
+
+/*'#4a1486'
+'#6a51a3'
+'#807dba'
+'#9e9ac8'
+'#bcbddc'
+'#dadaeb'
+'#efedf5'
+'#fcfbfd'*/
 
 function style(feature) {
     return {
@@ -43,7 +53,7 @@ function style(feature) {
         opacity: 1,
         color: 'white',
         dashArray: '3',
-        fillOpacity: 0.6
+        fillOpacity: 0.8
     };
 }
 
