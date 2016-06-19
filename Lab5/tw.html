@@ -42,13 +42,13 @@ var mymap = L.map('box').setView([40.90521, -77.827148], 8);
 }).addTo(mymap);
 
 var xhr=new XMLHttpRequest();
-xhr.open("GET", "http://burnsr77.github.io/GH_demo/PACo.geojson", true);
+xhr.open("GET", "http://burnsr77.github.io/GH_demo/PACo.geojson", false);
 xhr.send();
 
 var myJsonDictionary = JSON.parse(xhr.responseText);
 
 function onEachFeature(feature, layer) {
-    layer.bindPopup(feature.properties.COUNTY_NAM+ "<br />" +feature.properties.AREA_SQ_MI+ "sq mi");
+    layer.bindPopup(feature.properties.COUNTY_NAM+ "<br />" +feature.properties.AREA_SQ_MI+ sq mi);
     };
 
    L.geoJson(myJsonDictionary, {onEachFeature: onEachFeature
