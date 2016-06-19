@@ -13,8 +13,7 @@
 
 var mymap = L.map('mymap').setView([40.7880456,-77.870081], 8);
  
- var mapboxAccessToken = {pk.eyJ1IjoibGF1cmF0cnphc2thOCIsImEiOiJjaXBsZDdnbG4wMjFkdHptZGJ4Y2RmOGRjIn0.4kXJEWWMX8gqD1fhRRa7aA};
-L.tileLayer('mapbox://styles/mapbox/light-v9' + mapboxAccessToken, {
+L.tileLayer('mapbox://styles/mapbox/light-v9', {
     id: 'mapbox.light',
     attribution: ...
 }).addTo(mymap);
