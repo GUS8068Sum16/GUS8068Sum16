@@ -120,6 +120,72 @@ geojson = L.geoJson(litter, {
 }).addTo(mymap);
 
 </script>
+
+<style>
+  #basemaps-wrapper {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 400;
+    background: white;
+    padding: 10px;
+  }
+  #basemaps {
+    margin-bottom: 5px;
+  }
+</style>
+
+<div id="mymap"></div>
+
+<div id="basemaps-wrapper" class="leaflet-bar">
+  <select name="basemaps" id="basemaps" onChange="changeBasemap(basemaps)">
+    <option value="Topographic">Topographic<options>
+    <option value="Streets">Streets</option>
+    <option value="NationalGeographic">National Geographic<options>
+    <option value="Oceans">Oceans<options>
+    <option value="Gray">Gray<options>
+    <option value="DarkGray">Dark Gray<options>
+    <option value="Imagery">Imagery<options>
+    <option value="ShadedRelief">Shaded Relief<options>
+  </select>
+</div>
+
+<script>
+  var mymap = L.mymap('mymap').setView([39.9526, -75.1652], 11);
+  var layer = L.esri.basemapLayer('Topographic').addTo(mymap);
+  var layerLabels;
+
+  function setBasemap(basemap) {
+    if (layer) {
+     mymap.removeLayer(layer);
+    }
+
+    layer = L.esri.basemapLayer(basemap);
+
+    mymap.addLayer(layer);
+
+    if (layerLabels) {
+      mymap.removeLayer(layerLabels);
+    }
+
+    if (basemap === 'ShadedRelief'
+     || basemap === 'Oceans'
+     || basemap === 'Gray'
+     || basemap === 'DarkGray'
+     || basemap === 'Imagery'
+     || basemap === 'Terrain'
+   ) {
+      layerLabels = L.esri.basemapLayer(basemap + 'Labels');
+      mymap.addLayer(layerLabels);
+    }
+  }
+
+  function changeBasemap(basemaps){
+  var basemap = basemaps.value;
+  setBasemap(basemap);
+  }
+</script>
+
 </body>
 
 </html>
