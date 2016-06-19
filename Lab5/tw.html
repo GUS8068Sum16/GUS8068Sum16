@@ -48,7 +48,7 @@ xhr.send();
 var myJsonDictionary = JSON.parse(xhr.responseText);
 
 function onEachFeature(feature, layer) {
-    layer.bindPopup(feature.properties.COUNTY_NAM+ "<br />" +feature.properties.AREA_SQ_MI);
+    layer.bindPopup(feature.properties.COUNTY_NAM+ "<br />" +feature.properties.AREA_SQ_MI+ "sq mi");
     };
 
    L.geoJson(myJsonDictionary, {onEachFeature: onEachFeature
