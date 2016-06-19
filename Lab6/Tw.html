@@ -50,7 +50,19 @@ function onEachFeature(feature, layer) {
            d > 2 ? '#E31A1C' :
            d > 1 ? '#FC4E2A' :
                    '#FFEDA0';
-                                 }
+                    }
+function style(feature) {
+    return {
+        fillColor: getColor(feature.properties.SCORE),
+        weight: 2,
+        opacity: 1,
+        color: 'white',
+        dashArray: '3',
+        fillOpacity: 0.7
+    };
+}
+
+L.geoJson(statesData, {style: style}).addTo(map);
 
 L.geoJson(litter, {onEachFeature: onEachFeature
 }).addTo(mymap);
