@@ -11,6 +11,7 @@
    <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
     
 <script>
+L.geojson(pa).addTo(mymap);
   function onEachFeature(feature, layer) {
         layer.bindPopup("<h1>"+feature.properties.COUNTY_NAM+"</h1><p>"+feature.properties.AREA_SQ_MI+"</p>");
        };
@@ -37,7 +38,7 @@
     };
 }
 
-L.geoJson(statesData, {style: style}).addTo(map);
+L.geoJson(statesData, {style: style}).addTo(mymap);
 
 function highlightFeature(e) {
     var layer = e.target;
@@ -57,21 +58,19 @@ function highlightFeature(e) {
 function resetHighlight(e) {
     geojson.resetStyle(e.target);
 }
-  
-L.geojson(pa).addTo(map);.
 
   
 var mymap = L.map('mymap').setView([40.7880456,-77.870081], 8);
   
 var mapboxAccessToken = {pk.eyJ1IjoibGF1cmF0cnphc2thOCIsImEiOiJjaXBsZDdnbG4wMjFkdHptZGJ4Y2RmOGRjIn0.4kXJEWWMX8gqD1fhRRa7aA};
-var map = L.map('map').setView([37.8, -96], 4);
+var map = L.map('mymap').setView([40.7880456,-77.870081], 8);
 
 L.tileLayer('mapbox://styles/mapbox/light-v9' + mapboxAccessToken, {
     id: 'mapbox.light',
     attribution: ...
-}).addTo(map);
+}).addTo(mymap);
 
-L.geoJson(statesData).addTo(map);
+L.geoJson(statesData).addTo(mymap);
 
 var legend = L.control({position: 'bottomright'});
 
