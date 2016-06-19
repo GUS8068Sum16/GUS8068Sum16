@@ -51,6 +51,9 @@ function onEachFeature(feature, layer) {
            d > 1 ? '#FC4E2A' :
                    '#FFEDA0';
                     }
+    L.geoJson(litter, {onEachFeature: onEachFeature
+}).addTo(mymap);                
+                    
 function style(feature) {
     return {
         fillColor: getColor(feature.properties.SCORE),
@@ -63,9 +66,6 @@ function style(feature) {
 }
 
 L.geoJson(litter, {style: style}).addTo(mymap);
-
-L.geoJson(litter, {onEachFeature: onEachFeature
-}).addTo(mymap);
 
 function highlightFeature(e) {
     var layer = e.target;
