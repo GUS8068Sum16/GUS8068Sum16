@@ -1,21 +1,26 @@
 <html>
 <head>
   <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
-    <script src="pa_pop.js"></script>
-    
 </head>
 <body>
-  <h1> Pennsylvania </h1>
-  <h2> Counties and their area per square mile </h2>
+  <h1> Pennsylvania Counties</h1>
+  <h2> Laura Trzaska </h2>
   
   <div id="mymap" style="height:800px; width:1200px;"></div>
-    
+  <script src="pa_pop.js"></script>
+        
 <script>
 
-  L.geojson(pa).addTo(mymap);
-  
-  
 var mymap = L.map('mymap').setView([40.7880456,-77.870081], 8);
+ 
+ var mapboxAccessToken = {pk.eyJ1IjoibGF1cmF0cnphc2thOCIsImEiOiJjaXBsZDdnbG4wMjFkdHptZGJ4Y2RmOGRjIn0.4kXJEWWMX8gqD1fhRRa7aA};
+L.tileLayer('mapbox://styles/mapbox/light-v9' + mapboxAccessToken, {
+    id: 'mapbox.light',
+    attribution: ...
+}).addTo(mymap);
+L.geoJson(statesData).addTo(mymap);
+
+L.geojson(pa).addTo(mymap);
  
  </script>
 </body>
