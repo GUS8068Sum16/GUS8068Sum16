@@ -48,6 +48,8 @@ function style(feature) {
     };
 }
 
+L.geoJson(pa, {style: style}).addTo(mymap);
+
 function highlightFeature(e) {
     var layer = e.target;
 
@@ -61,8 +63,6 @@ function highlightFeature(e) {
 function resetHighlight(e) {
     geojson.resetStyle(e.target);
 }
-
-L.geoJson(pa, {style: style}).addTo(mymap);
 
 </script>
 </body>
