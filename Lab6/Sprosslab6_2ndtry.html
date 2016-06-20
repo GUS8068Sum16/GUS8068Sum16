@@ -151,6 +151,12 @@ legend.onAdd = function (mymap) {
 
 legend.addTo(mymap);
 
+var overlayMaps = {
+    "Counties": geojson
+};
+
+L.control.layers(overlayMaps).addTo(mymap);
+
 </script>
 </body>
 </html>
